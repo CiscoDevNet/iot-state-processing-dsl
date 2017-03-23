@@ -1,0 +1,16 @@
+-- Usage file for various scenarios using DSL
+--	1. Transformation Scenario
+
+-- Run it with genericData.data
+
+LOG "########################################Start of Rule Application for a Message########################################";
+
+-- Transformation use case
+--============================================================================================================================================================
+when<ruleTx01> msg(engine.temp) > 1000 for (10 ms) then {
+   print rule_id() + " ---- " + rule_time();
+   engine.temp_fahrenheit = engine.temp*1.8 + 32;
+   TS_UPDATE engine.temp_fahrenheitTS WITH engine.temp_fahrenheit AT engine.timestamp WINDOW (3000 ms);
+   engine.temp_fahrenheit_avg = ts_avg(engine.temp_fahrenheitTS);
+   SEND TO "starlord" TOPIC "Engine" JSON engine.temp_fahrenheit, engine.temp_fahrenheit_avg, engine.timestamp;
+}

@@ -1,0 +1,32 @@
+-- Usage file for various components in DSL
+--	1. for
+
+-- Run it with genericData.data
+
+LOG "########################################Start of Rule Application for a Message########################################";
+--'for' usage
+--$$$$$$$$$$$$$$$$
+
+init {
+	i=2;
+}
+
+--Min and max time limit provided. The condition should be true only between min and max time and only then do something
+--Example if i>1 between 2 to 5s, then log something between 2-5s
+--============================================================================================================================================================
+when<RuleFor1> i>1 for(2:5 in s) then LOG "i greater for the duration:" + rule_id();
+
+--Min limit provided. The condition should be true only between min and max(taken as 9223372036854775807 or [0x7fffffffffffffff] by default) and only then log something
+--============================================================================================================================================================
+when<RuleFor2> i>1 for(2: in s) then {
+	LOG "i greater for the duration:" + rule_id();
+	SEND TO "starlord" TOPIC "EMAIL/i JSON" JSON engine;
+	SEND TO "starlord" TOPIC "EMAIL/i PAYLOAD" PAYLOAD engine.temp;
+	SEND TO "starlord" TOPIC "EMAIL/i PAYLOAD" PAYLOAD "FIRE IN THE BREAKS!!!!!!! RUN";
+}
+
+--When engine temperature is greater than 1000 between 2-60s then send an EMAIL/TEMP_50_Alert-1 every 500ms.
+--When engine temperature is greater than 500 between 5-MAX s then send an EMAIL/TEMP_50_Alert-2 every 3s.
+--============================================================================================================================================================
+WHEN<RuleCombo1>  engine.temp > 1000 for(2 : 60 sec) THEN THROTTLE(500 ms) SEND TO "starlord" TOPIC "EMAIL/TEMP_50_Alert-1" JSON engine;
+WHEN<RuleCombo2>  engine.temp > 500 for(5: s) THEN THROTTLE(3) SEND TO "starlord" TOPIC "EMAIL/TEMP_50_Alert-2" JSON engine;

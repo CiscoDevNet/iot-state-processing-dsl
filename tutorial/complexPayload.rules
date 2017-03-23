@@ -1,0 +1,25 @@
+-- Usage file for various components in DSL
+--	1. Access Message Components
+-- Run it with complexPayload.data
+
+LOG "########################################Start of Rule Application for a Message########################################";
+
+--'Access Message Components'
+--$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+--Get an individual component from existing message
+--============================================================================================================================================================
+LOG "--------- MSG from Asset: Engine Temp: "+ msg(engine.temp) ;
+LOG "--------- MSG from Asset: Brakes Temp: "+ msg(brakes.temp) ;
+LOG "--------- MSG from Asset: Engine Spark Plug Temp: "+ msg(engine.sparkPlug.temp) ;
+LOG "--------- MSG from Asset: Engine Valve Temp: "+ msg(engine.valves.temp) ;
+
+--Array inside payload
+--============================================================================================================================================================
+--a = "AC.temp[0]" ;
+--LOG "--------- MSG from Asset: Engine Different Temp: "+ msg(AC.temp.value) ;
+--LOG "--------- MSG from Asset: Engine Different Temp: "+ msg(AC.temp[0].value) ;
+--LOG "--------- MSG from Asset: Engine Different Temp: "+ msg(AC.temp(0).value) ;
+--LOG "--------- MSG from Asset: Engine Different Temp: " + a.value ;
+--LOG "--------- MSG from Asset: Engine Different Temp: "+ AC.temp[0].value ;
+--SEND "hi" JSON AC ;

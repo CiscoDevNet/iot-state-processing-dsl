@@ -1,0 +1,51 @@
+-- Usage file for various components in DSL
+--	1. Relational Expression
+
+-- Run it with genericData.data
+
+LOG "########################################Start of Rule Application for a Message########################################";
+--'Relational Expression' usage
+--$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+init {
+	firstNumber = 100;
+	secondNumber = 100;
+	thirdNumber = 150;
+	fourthExp = true ;
+}
+
+when<Rule1> firstNumber >= secondNumber then LOG "firstNumber is greater than equal to secondNumber";
+when<Rule2> firstNumber == secondNumber then LOG "firstNumber is equal to secondNumber";
+when<Rule3> secondNumber <= thirdNumber then LOG "thirdNumber is greater than equal to secondNumber";
+when<Rule4> firstNumber > 90 && secondNumber > 50 then LOG "Aha!";
+when<Rule5> firstNumber > 100 || secondNumber < 110 then LOG "Still Aha!"; 
+
+--'Binary Operator' usage
+--$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+add = firstNumber + thirdNumber ;
+LOG "add : " + add ;
+
+subtract = firstNumber - thirdNumber ;
+LOG "subtract : " + subtract ;
+
+multiply = firstNumber * thirdNumber ;
+LOG "multiply : " + multiply ;
+
+div = firstNumber / thirdNumber ;
+LOG "div : " + div ;
+
+pow = firstNumber ^ 2 ;
+LOG "pow : " + pow ;
+
+LOG "fourthExp: " + !fourthExp ;
+
+--String Modifications
+--$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+init string1 = "Hello" ;
+init string2 = "Hello" ;
+init string3 = "HelloAgain" ;
+
+when<Rule6> string1 == string2 then LOG "Hellos are same" ;
+when<Rule7> string1 == string3 then LOG "Hellos are not same and lib is faulty :(" ;
+--Below doesn't work
+--when<Rule8> string1 > string3 then LOG "True again" ;

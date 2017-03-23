@@ -1,0 +1,6 @@
+--Asset Name;Delay;Message
+engine;1000;{"temp": 1000, "msg":1}
+engine;1000;{"temp": 1020, "msg":2}
+engine;1000;{"tire-temp": 1020, "msg":2}
+brakes;1000;{"temp": "1000", "msg":1}
+brakes;1000;{"temp": "1020", "msg":2}

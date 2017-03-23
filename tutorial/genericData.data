@@ -1,0 +1,9 @@
+--Asset Name;Delay;Message
+engine;1000;{"temp": 1000, "msg":1}
+engine;1000;{"temp": 1020, "msg":2}
+engine;1000;{"temp": 1040, "msg":3}
+engine;1000;{"temp": 1060, "msg":4}
+engine;1000;{"temp": 900, "msg":5}
+engine;1000;{"temp": 800, "msg":6}
+brakes;1000;{"temp": 1100, "msg":7}
+engine;1000;{"pressure": 800, "msg":8}

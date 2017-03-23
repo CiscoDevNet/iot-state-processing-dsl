@@ -1,0 +1,63 @@
+RulesFile:test01.rules
+brakes;1000;{"brake_status": "on", "msg":0}
+Results:0
+brakes;1000;{"brake_status": "off", "msg":1}
+Results:0
+brakes;1000;{"brake_status": "off", "msg":2}
+Results:0
+brakes;1000;{"brake_status": "off", "msg":3}
+Results:0
+brakes;1000;{"brake_status": "on", "msg":4}
+Results:0
+brakes;1000;{"brake_status": "off", "msg":5}
+Results:0
+brakes;1000;{"brake_status": "on", "msg":6}
+Results:0
+brakes;1000;{"brake_status": "on", "msg":7}
+Results:0
+brakes;1000;{"brake_status": "off", "msg":8}
+Results:0
+brakes;1000;{"brake_status": "off", "msg":9}
+Results:0
+brakes;1000;{"brake_status": "off", "msg":10}
+Results:0
+brakes;1000;{"brake_status": "off", "msg":11}
+Results:0
+brakes;1000;{"brake_status": "off", "msg":12}
+Results:0
+brakes;1000;{"brake_status": "off", "msg":13}
+Results:0
+brakes;1000;{"brake_status": "off", "msg":14}
+Results:0
+brakes;1000;{"brake_status": "off", "msg":15}
+Results:0
+brakes;1000;{"brake_status": "off", "msg":16}
+Results:0
+brakes;1000;{"brake_status": "off", "msg":17}
+Results:0
+brakes;1000;{"brake_status": "off", "msg":18}
+Results:0
+brakes;1000;{"brake_status": "off", "msg":19}
+Results:0
+brakes;1000;{"brake_status": "off", "msg":20}
+Results:0
+brakes;1000;{"brake_status": "off", "msg":21}
+Results:0
+brakes;1000;{"brake_status": "off", "msg":22}
+Results:0
+brakes;1000;{"brake_status": "off", "msg":23}
+Results:0
+brakes;1000;{"brake_status": "off", "msg":24}
+Results:0
+brakes;1000;{"brake_status": "off", "msg":25}
+Results:0
+brakes;1000;{"brake_status": "off", "msg":26}
+Results:0
+brakes;1000;{"brake_status": "off", "msg":27}
+Results:0
+brakes;1000;{"brake_status": "on", "msg":28}
+Results:0
+brakes;1000;{"brake_status": "off", "msg":29}
+Results:0
+brakes;1000;{"brake_status": "off", "msg":30}
+Results:0

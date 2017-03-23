@@ -1,0 +1,21 @@
+-- Usage file for various components in DSL
+--	1. Change
+--  2. Cos
+-- Run it with functionUsage.data
+
+LOG "########################################Start of Rule Application for a Message########################################";
+LOG "Engine temp: " + msg(engine.temp) ;
+--change(id) gives the absolute change in id sent between current and previous states
+--currentTemp - 1020, previousTemp - 1000, change() would give (1020-1000)/1000
+--======================================================================================
+LOG "change seen Engine: " + change(engine.temp) ;
+
+--change(id) gives the absolute change in id sent between current and previous states
+--If strings are sent - currentTemp - "1020", previousTemp - "1000", change() would give false
+--======================================================================================
+LOG "change seen Brakes: " + change(brakes.temp) ;
+
+--cos(angle) gives the cos of angle. Angle is in radians
+--======================================================================================
+LOG "cos(0deg): " + cos(0) ;
+LOG "cos(90deg): " + cos(1.5708);

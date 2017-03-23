@@ -1,0 +1,9 @@
+engine;100;{"temp": 10, "msg":1}
+brakes;100;{"temp": 20, "msg":2}
+engine;100;{"temp": 30, "msg":3}
+brakes;100;{"temp": 2, "msg":4}
+brakes;100;{"temp": 40, "msg":5}
+engine;100;{"temp": 3, "msg":6}
+engine;100;{"temp": 1100, "msg":7}
+engine;100;{"pressure": 800, "msg":8}
+brakes;100;{"pressure": 40, "msg":9}

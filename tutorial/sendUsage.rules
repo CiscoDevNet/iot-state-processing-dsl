@@ -1,0 +1,33 @@
+-- Usage file for various components in DSL
+--	1. send
+
+-- Run it with genericData.data
+
+LOG "########################################Start of Rule Application for a Message########################################";
+--'Send' usage
+--$$$$$$$$$$$$$$$$
+
+--Send an Action to "Starlord" with topic "help" and send json like engine's current status
+--============================================================================================================================================================
+SEND TO "Starlord" TOPIC "help" JSON engine;
+
+--Send an Action to "Drax" with topic "help" and send json - engine temperature only
+--============================================================================================================================================================
+SEND TO "Drax" TOPIC "help" JSON engine.temp;
+
+--Send an Action to "Flash" with topic "help" and send json like engine and brakes' current status
+--============================================================================================================================================================
+SEND TO "Flash" TOPIC "help" JSON engine, brakes;
+
+--Send an Action to "IronMan" with topic "help" and send PAYLOAD message too. PAYLOAD can be replaced by DATA too.
+--============================================================================================================================================================
+SEND TO "IronMan" TOPIC "help" PAYLOAD "Pressure level seriously high";
+SEND TO "IronMan" TOPIC "help" DATA "Pressure level seriously high";
+
+--Send an Action to "Flash" topic "help" and send json like engine's current status
+--============================================================================================================================================================
+SEND TO "flash" TOPIC "help" JSON engine;
+
+--Send an Action to topic "help" and send json like engine's current status
+--============================================================================================================================================================
+SEND TO "flash" TOPIC "help" JSON engine, brakes.temp;

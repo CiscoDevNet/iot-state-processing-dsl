@@ -1,0 +1,73 @@
+RulesFile:sendUsage.rules
+engine;1000;{"temp": 1000, "msg":1}
+Results:7
+ACTION:"SEND" DEST:Starlord TOPIC:help DATA:{"engine":{"temp":1000,"msg":1}}
+ACTION:"SEND" DEST:Drax TOPIC:help DATA:{"engine":{"temp":1000}}
+ACTION:"SEND" DEST:Flash TOPIC:help DATA:{"engine":{"temp":1000,"msg":1}}
+ACTION:"SEND" DEST:IronMan TOPIC:help DATA:[Pressure level seriously high]
+ACTION:"SEND" DEST:IronMan TOPIC:help DATA:[Pressure level seriously high]
+ACTION:"SEND" DEST:flash TOPIC:help DATA:{"engine":{"temp":1000,"msg":1}}
+ACTION:"SEND" DEST:flash TOPIC:help DATA:{"engine":{"temp":1000,"msg":1}}
+engine;1000;{"temp": 1020, "msg":2}
+Results:7
+ACTION:"SEND" DEST:Starlord TOPIC:help DATA:{"engine":{"temp":1020,"msg":2}}
+ACTION:"SEND" DEST:Drax TOPIC:help DATA:{"engine":{"temp":1020}}
+ACTION:"SEND" DEST:Flash TOPIC:help DATA:{"engine":{"temp":1020,"msg":2}}
+ACTION:"SEND" DEST:IronMan TOPIC:help DATA:[Pressure level seriously high]
+ACTION:"SEND" DEST:IronMan TOPIC:help DATA:[Pressure level seriously high]
+ACTION:"SEND" DEST:flash TOPIC:help DATA:{"engine":{"temp":1020,"msg":2}}
+ACTION:"SEND" DEST:flash TOPIC:help DATA:{"engine":{"temp":1020,"msg":2}}
+engine;1000;{"temp": 1040, "msg":3}
+Results:7
+ACTION:"SEND" DEST:Starlord TOPIC:help DATA:{"engine":{"temp":1040,"msg":3}}
+ACTION:"SEND" DEST:Drax TOPIC:help DATA:{"engine":{"temp":1040}}
+ACTION:"SEND" DEST:Flash TOPIC:help DATA:{"engine":{"temp":1040,"msg":3}}
+ACTION:"SEND" DEST:IronMan TOPIC:help DATA:[Pressure level seriously high]
+ACTION:"SEND" DEST:IronMan TOPIC:help DATA:[Pressure level seriously high]
+ACTION:"SEND" DEST:flash TOPIC:help DATA:{"engine":{"temp":1040,"msg":3}}
+ACTION:"SEND" DEST:flash TOPIC:help DATA:{"engine":{"temp":1040,"msg":3}}
+engine;1000;{"temp": 1060, "msg":4}
+Results:7
+ACTION:"SEND" DEST:Starlord TOPIC:help DATA:{"engine":{"temp":1060,"msg":4}}
+ACTION:"SEND" DEST:Drax TOPIC:help DATA:{"engine":{"temp":1060}}
+ACTION:"SEND" DEST:Flash TOPIC:help DATA:{"engine":{"temp":1060,"msg":4}}
+ACTION:"SEND" DEST:IronMan TOPIC:help DATA:[Pressure level seriously high]
+ACTION:"SEND" DEST:IronMan TOPIC:help DATA:[Pressure level seriously high]
+ACTION:"SEND" DEST:flash TOPIC:help DATA:{"engine":{"temp":1060,"msg":4}}
+ACTION:"SEND" DEST:flash TOPIC:help DATA:{"engine":{"temp":1060,"msg":4}}
+engine;1000;{"temp": 900, "msg":5}
+Results:7
+ACTION:"SEND" DEST:Starlord TOPIC:help DATA:{"engine":{"temp":900,"msg":5}}
+ACTION:"SEND" DEST:Drax TOPIC:help DATA:{"engine":{"temp":900}}
+ACTION:"SEND" DEST:Flash TOPIC:help DATA:{"engine":{"temp":900,"msg":5}}
+ACTION:"SEND" DEST:IronMan TOPIC:help DATA:[Pressure level seriously high]
+ACTION:"SEND" DEST:IronMan TOPIC:help DATA:[Pressure level seriously high]
+ACTION:"SEND" DEST:flash TOPIC:help DATA:{"engine":{"temp":900,"msg":5}}
+ACTION:"SEND" DEST:flash TOPIC:help DATA:{"engine":{"temp":900,"msg":5}}
+engine;1000;{"temp": 800, "msg":6}
+Results:7
+ACTION:"SEND" DEST:Starlord TOPIC:help DATA:{"engine":{"temp":800,"msg":6}}
+ACTION:"SEND" DEST:Drax TOPIC:help DATA:{"engine":{"temp":800}}
+ACTION:"SEND" DEST:Flash TOPIC:help DATA:{"engine":{"temp":800,"msg":6}}
+ACTION:"SEND" DEST:IronMan TOPIC:help DATA:[Pressure level seriously high]
+ACTION:"SEND" DEST:IronMan TOPIC:help DATA:[Pressure level seriously high]
+ACTION:"SEND" DEST:flash TOPIC:help DATA:{"engine":{"temp":800,"msg":6}}
+ACTION:"SEND" DEST:flash TOPIC:help DATA:{"engine":{"temp":800,"msg":6}}
+brakes;1000;{"temp": 1100, "msg":7}
+Results:7
+ACTION:"SEND" DEST:Starlord TOPIC:help DATA:{"engine":{"temp":800,"msg":6}}
+ACTION:"SEND" DEST:Drax TOPIC:help DATA:{"engine":{"temp":800}}
+ACTION:"SEND" DEST:Flash TOPIC:help DATA:{"engine":{"temp":800,"msg":6},"brakes":{"msg":7,"temp":1100}}
+ACTION:"SEND" DEST:IronMan TOPIC:help DATA:[Pressure level seriously high]
+ACTION:"SEND" DEST:IronMan TOPIC:help DATA:[Pressure level seriously high]
+ACTION:"SEND" DEST:flash TOPIC:help DATA:{"engine":{"temp":800,"msg":6}}
+ACTION:"SEND" DEST:flash TOPIC:help DATA:{"engine":{"temp":800,"msg":6},"brakes":{"temp":1100}}
+engine;1000;{"pressure": 800, "msg":8}
+Results:7
+ACTION:"SEND" DEST:Starlord TOPIC:help DATA:{"engine":{"temp":800,"pressure":800,"msg":8}}
+ACTION:"SEND" DEST:Drax TOPIC:help DATA:{"engine":{"temp":800}}
+ACTION:"SEND" DEST:Flash TOPIC:help DATA:{"engine":{"temp":800,"pressure":800,"msg":8},"brakes":{"msg":7,"temp":1100}}
+ACTION:"SEND" DEST:IronMan TOPIC:help DATA:[Pressure level seriously high]
+ACTION:"SEND" DEST:IronMan TOPIC:help DATA:[Pressure level seriously high]
+ACTION:"SEND" DEST:flash TOPIC:help DATA:{"engine":{"temp":800,"pressure":800,"msg":8}}
+ACTION:"SEND" DEST:flash TOPIC:help DATA:{"engine":{"temp":800,"pressure":800,"msg":8},"brakes":{"temp":1100}}

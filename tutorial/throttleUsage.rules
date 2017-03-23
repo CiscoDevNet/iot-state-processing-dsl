@@ -1,0 +1,32 @@
+-- Usage file for various components in DSL
+--	1. throttle
+
+-- Run it with genericData.data
+
+LOG "########################################Start of Rule Application for a Message########################################";
+--'Throttle' usage
+--$$$$$$$$$$$$$$$$
+
+init {
+	i=2;
+}
+
+--Time difference between 2 messages is less than specified time, then throttle or Throttle every message for time specified(5s)
+--or Repeat action every specified time(5s)
+--============================================================================================================================================================
+when<Rule1> i>1 then {
+      throttle<Throttle1> (5 IN s) print "Hi:" + rule_id();
+}
+
+--Based on temperature difference between 2 messages decide the level of urgence and hence frequency os sending message
+--Engine Temperature difference between 2 consecutive messages is greater than 10, send message every 1min to EMAIL/TEMP_CHANGED_10. - DEFCON 1
+--Engine Temperature difference between 2 consecutive messages is greater than 50, send message every 1ms to EMAIL/TEMP_CHANGED_50. - DEFCON 2
+--============================================================================================================================================================
+when<Rule2> abs(msg(engine.temp) - prev(engine.temp)) > 50 THEN THROTTLE(1 ms)  {
+	LOG "Implementing rule:" + rule_id(); 	
+	SEND TO "starlord" TOPIC "EMAIL/TEMP_CHANGED_50" JSON engine;
+}
+when<Rule3> abs(msg(engine.temp) - prev(engine.temp)) > 10 THEN THROTTLE(1 m)  {
+	LOG "Implementing rule:" + rule_id();
+	SEND TO "starlord" TOPIC "EMAIL/TEMP_CHANGED_10" JSON engine;
+}

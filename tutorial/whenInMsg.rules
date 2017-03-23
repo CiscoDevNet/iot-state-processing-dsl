@@ -1,0 +1,12 @@
+--With multiple assets, use this format
+--============================================================================================================================================================
+when<Rule1> brakes.temp in-msg THEN  { 
+	when<Rule1a> msg(brakes.temp) > 5 then {
+		SEND TO "DefaultProfileName" TOPIC "high1" JSON brakes ; 
+	}
+}
+else when<Rule2> engine.temp in-msg then { 
+	when<Rule2a> msg(engine.temp) > 5 then {
+		SEND TO "DefaultProfileName" TOPIC "high2" JSON engine ; 
+	}
+} 

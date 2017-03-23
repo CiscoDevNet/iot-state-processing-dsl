@@ -1,0 +1,33 @@
+-- Usage file for various components in DSL
+--	1. Time Series
+
+-- Run it with genericData.data
+
+LOG "########################################Start of Rule Application for a Message########################################";
+--'TS' usage
+--$$$$$$$$$$$$$$$$
+
+--Create a time series object for engine temperature from message against the message timestamp for a 3s window
+--For example below, x-axis is time and y-axis is temperature. 
+--Object always captures 3s window worth of data. Then it slides.
+--============================================================================================================================================================
+TS_UPDATE tempTSObjTime WITH msg(engine.temp) WINDOW (3 sec);
+
+--Create a time series object for engine temperature from message against the message number for a 5 message window. Only 5 messages are maintained. Then it slides to next 5
+--For example below, x-axis is message number and y-axis is temperature
+--=============================================================================================================================================================================
+TS_UPDATE tempTSObjMsgSeq WITH msg(engine.temp) AT engine.msg WINDOW (5);
+
+--Create a time series object for engine temperature from message against the message timestamp for a 3s window
+--Calculate average temperature and count members in time series object.
+--Check if number of members is greater than 1. If yes, log it
+--Check if avg temperature is greater than 500. If yes then send Action 
+--============================================================================================================================================================
+TS_UPDATE tempTimeSeries WITH msg(engine.temp) WINDOW (3 sec);
+temp_avg = ts_avg(tempTimeSeries);
+temp_count = ts_count(tempTimeSeries);
+WHEN temp_count > 1 THEN LOG "Time Series Temperature Count:" + temp_count ;
+WHEN temp_avg > 500 THEN {
+	LOG "Time Series Temperature Avg:" + temp_avg ;
+	SEND TO "SuperMan" TOPIC "help" JSON engine;
+}

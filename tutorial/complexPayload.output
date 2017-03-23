@@ -1,0 +1,9 @@
+RulesFile:complexPayload.rules
+engine;1000;{"temp": 1000, "msg":1}
+Results:0
+brakes;1000;{"temp": 1200, "msg":2}
+Results:0
+engine;100;{"sparkPlug":{"temp": 1500, "msg":20}, "valves":{"temp": 1600, "msg":21}}
+Results:0
+AC;100;{"temp": [{"value": 100,"msg": 1}, {"value": 200,"msg": 2}, {"value": 300,"msg": 3}, {"value": 400,"msg": 4}]}
+Results:0

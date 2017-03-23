@@ -1,0 +1,53 @@
+-- example 02   Nabor
+-- send/print message when temperature more than 50 degrees 2 times inside 3 second period
+
+LOG_LEVEL trace;
+
+SEND TO "BD" TOPIC "---RELAX---" JSON engine, brakes.temp;
+
+when engine.timestamp in-msg then LOG "--------- MSG from Asset: Engine: "+ subtree(engine) ;
+when brakes.timestamp in-msg then LOG "--------- MSG from Asset: Brakes: "+ subtree(brakes) ;
+
+-- Change use case:
+WHEN abs(msg(engine.temp) - prev(engine.temp)) > 10 THEN THROTTLE(1 ms)  SEND TO "starlord" TOPIC "EMAIL/TEMP_CHANGED_10" JSON engine;
+
+-- Duration use case:
+
+when msg(engine.temp) > 0 then {
+    WHEN<r1>  engine.temp > 50 for(2 : 60 sec) THEN THROTTLE(500 ms) SEND TO "starlord" TOPIC "EMAIL/TEMP_50_Alert-1" JSON engine;
+    WHEN<r2>  engine.temp > 50 for(1: min) THEN THROTTLE(3) SEND TO "starlord" TOPIC "EMAIL/TEMP_50_Alert-2" JSON engine;
+}
+
+TS_UPDATE all_temp WITH msg(engine.temp) WINDOW (3 sec);
+
+-- Counting use case:
+when engine.temp > 50 then TS_UPDATE temp WITH msg(engine.temp) WINDOW (3 sec);
+temp_avg = ts_avg(temp);
+temp_count = ts_count(temp);
+WHEN ts_count(temp) > 2 THEN throttle(5 sec) SEND TO "starlord" TOPIC "EMAIL/TEMP_CHANGED" JSON engine, temp_avg;
+
+-- deadband support, Note: init statemend does not really needed
+init {
+    -- deadband = 10 is set in wrapper as example how to add varibles from outside of Rule Engine
+    high_limit=50;
+}
+when engine.temp > high_limit then alarm = true;
+when engine.temp < high_limit - deadband then alarm = false;
+when alarm IS true THEN SEND TO "starlord" TOPIC "ALARM" JSON engine;
+
+
+-- Transformation use case
+when<rule01> msg(brakes.temp) > 10 for (100 ms) then {
+   print rule_id() + " ---- " + rule_time();
+   brakes.temp_fahrenheit = brakes.temp*1.8 + 32;
+   brakes.pressure_psi = brakes.pressure * .14503;
+   TS_UPDATE brakes.temp_fahrenheit WITH brakes.temp_fahrenheit WINDOW (3000 ms);
+   brakes.temp_fahrenheit_avg = ts_avg(brakes.temp_fahrenheit);
+   SEND TO "starlord" TOPIC "BRAKES" JSON brakes.temp_fahrenheit, brakes.temp_fahrenheit_avg, brakes.pressure_psi ;
+}
+
+-- some use case
+THROTTLE(5000 ms) {
+  e.a = "ea"; x = 33;
+  SEND TO "starlord" TOPIC "EMAIL/TEMP_CHANGED_1" DATA engine.temp, engine.msg, "{""x"":"+ x +"}";
+}

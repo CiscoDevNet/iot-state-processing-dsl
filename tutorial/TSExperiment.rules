@@ -1,0 +1,12 @@
+-- Usage file for various components in DSL
+--	1. Access Message Components
+-- Run it with TSExperiment.data
+
+LOG "########################################Start of Rule Application for a Message########################################";
+
+--If the time series command specifies a string on x-axis, then the command defaults to current time on x-axis.
+--If the time series command specifies a string on y-axis, then the time series is not formed.
+--In case below, pressureSeries is formed but not tempSeriesString
+--==============================================================================================================
+TS_UPDATE tempSeriesString WITH msg(engine.temp) AT engine.msg WINDOW (3 sec);
+TS_UPDATE pressureSeries WITH msg(engine.pressure) AT engine.msg WINDOW (3 sec);

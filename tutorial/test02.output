@@ -1,0 +1,218 @@
+RulesFile:test02.rules
+brakes;1000;{"temp": 30, "pressure":1500, "msg":0}
+Results:2
+ACTION:"SEND" DEST:BD TOPIC:---RELAX--- DATA:{"brakes":{"temp":30}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/TEMP_CHANGED_1 DATA:[null, null, {"x":33.0}]
+engine;250;{"temp": 60, "msg":2}
+Results:2
+ACTION:"SEND" DEST:BD TOPIC:---RELAX--- DATA:{"engine":{"temp":60,"msg":2},"brakes":{"temp":30}}
+ACTION:"SEND" DEST:starlord TOPIC:ALARM DATA:{"engine":{"temp":60,"msg":2}}
+engine;250;{"temp": 100, "msg":3}
+Results:3
+ACTION:"SEND" DEST:BD TOPIC:---RELAX--- DATA:{"engine":{"temp":100,"msg":3},"brakes":{"temp":30}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/TEMP_CHANGED_10 DATA:{"engine":{"temp":100,"msg":3}}
+ACTION:"SEND" DEST:starlord TOPIC:ALARM DATA:{"engine":{"temp":100,"msg":3}}
+engine;1000;{"temp": 10, "msg":4}
+Results:3
+ACTION:"SEND" DEST:BD TOPIC:---RELAX--- DATA:{"engine":{"temp":10,"msg":4},"brakes":{"temp":30}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/TEMP_CHANGED_10 DATA:{"engine":{"temp":10,"msg":4}}
+ACTION:"SEND" DEST:starlord TOPIC:ALARM DATA:{"engine":{"temp":10,"msg":4}}
+engine;1000;{"temp": 60, "msg":5}
+Results:4
+ACTION:"SEND" DEST:BD TOPIC:---RELAX--- DATA:{"engine":{"temp":60,"msg":5},"brakes":{"temp":30}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/TEMP_CHANGED_10 DATA:{"engine":{"temp":60,"msg":5}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/TEMP_CHANGED DATA:{"engine":{"temp":60,"msg":5},"temp_avg":73.33333333333333}
+ACTION:"SEND" DEST:starlord TOPIC:ALARM DATA:{"engine":{"temp":60,"msg":5}}
+brakes;1000;{"temp": 30, "pressure":1500, "msg":1}
+Results:3
+ACTION:"SEND" DEST:BD TOPIC:---RELAX--- DATA:{"engine":{"temp":60,"msg":5},"brakes":{"temp":30}}
+ACTION:"SEND" DEST:starlord TOPIC:ALARM DATA:{"engine":{"temp":60,"msg":5}}
+ACTION:"SEND" DEST:starlord TOPIC:BRAKES DATA:{"brakes":{"temp_fahrenheit_avg":86.0,"temp_fahrenheit":86.0,"pressure_psi":217.545}}
+engine;1000;{"temp": 10,  "msg":6}
+Results:3
+ACTION:"SEND" DEST:BD TOPIC:---RELAX--- DATA:{"engine":{"temp":10,"msg":6},"brakes":{"temp":30}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/TEMP_CHANGED_10 DATA:{"engine":{"temp":10,"msg":6}}
+ACTION:"SEND" DEST:starlord TOPIC:ALARM DATA:{"engine":{"temp":10,"msg":6}}
+engine;1000;{"temp": 10, "msg":7}
+Results:3
+ACTION:"SEND" DEST:BD TOPIC:---RELAX--- DATA:{"engine":{"temp":10,"msg":7},"brakes":{"temp":30}}
+ACTION:"SEND" DEST:starlord TOPIC:ALARM DATA:{"engine":{"temp":10,"msg":7}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/TEMP_CHANGED_1 DATA:[10, 7, {"x":33.0}]
+brakes;1000;{"temp": 200, "pressure":1500, "msg":2}
+Results:3
+ACTION:"SEND" DEST:BD TOPIC:---RELAX--- DATA:{"engine":{"temp":10,"msg":7},"brakes":{"temp":200}}
+ACTION:"SEND" DEST:starlord TOPIC:ALARM DATA:{"engine":{"temp":10,"msg":7}}
+ACTION:"SEND" DEST:starlord TOPIC:BRAKES DATA:{"brakes":{"temp_fahrenheit_avg":392.0,"temp_fahrenheit":392.0,"pressure_psi":217.545}}
+engine;1000;{"temp": 100, "msg":8}
+Results:3
+ACTION:"SEND" DEST:BD TOPIC:---RELAX--- DATA:{"engine":{"temp":100,"msg":8},"brakes":{"temp":200}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/TEMP_CHANGED_10 DATA:{"engine":{"temp":100,"msg":8}}
+ACTION:"SEND" DEST:starlord TOPIC:ALARM DATA:{"engine":{"temp":100,"msg":8}}
+engine;1000;{"temp": 60, "msg":9}
+Results:3
+ACTION:"SEND" DEST:BD TOPIC:---RELAX--- DATA:{"engine":{"temp":60,"msg":9},"brakes":{"temp":200}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/TEMP_CHANGED_10 DATA:{"engine":{"temp":60,"msg":9}}
+ACTION:"SEND" DEST:starlord TOPIC:ALARM DATA:{"engine":{"temp":60,"msg":9}}
+engine;1000;{"temp": 100, "msg":10}
+Results:5
+ACTION:"SEND" DEST:BD TOPIC:---RELAX--- DATA:{"engine":{"temp":100,"msg":10},"brakes":{"temp":200}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/TEMP_CHANGED_10 DATA:{"engine":{"temp":100,"msg":10}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/TEMP_50_Alert-1 DATA:{"engine":{"temp":100,"msg":10}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/TEMP_CHANGED DATA:{"engine":{"temp":100,"msg":10},"temp_avg":86.66666666666667}
+ACTION:"SEND" DEST:starlord TOPIC:ALARM DATA:{"engine":{"temp":100,"msg":10}}
+engine;1000;{"temp": 60, "msg":11}
+Results:5
+ACTION:"SEND" DEST:BD TOPIC:---RELAX--- DATA:{"engine":{"temp":60,"msg":11},"brakes":{"temp":200}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/TEMP_CHANGED_10 DATA:{"engine":{"temp":60,"msg":11}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/TEMP_50_Alert-1 DATA:{"engine":{"temp":60,"msg":11}}
+ACTION:"SEND" DEST:starlord TOPIC:ALARM DATA:{"engine":{"temp":60,"msg":11}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/TEMP_CHANGED_1 DATA:[60, 11, {"x":33.0}]
+brakes;1000;{"temp": 50, "pressure":1500, "msg":3}
+Results:3
+ACTION:"SEND" DEST:BD TOPIC:---RELAX--- DATA:{"engine":{"temp":60,"msg":11},"brakes":{"temp":50}}
+ACTION:"SEND" DEST:starlord TOPIC:ALARM DATA:{"engine":{"temp":60,"msg":11}}
+ACTION:"SEND" DEST:starlord TOPIC:BRAKES DATA:{"brakes":{"temp_fahrenheit_avg":122.0,"temp_fahrenheit":122.0,"pressure_psi":217.545}}
+brakes;1000;{"temp": 150, "pressure":1500, "msg":4}
+Results:3
+ACTION:"SEND" DEST:BD TOPIC:---RELAX--- DATA:{"engine":{"temp":60,"msg":11},"brakes":{"temp":150}}
+ACTION:"SEND" DEST:starlord TOPIC:ALARM DATA:{"engine":{"temp":60,"msg":11}}
+ACTION:"SEND" DEST:starlord TOPIC:BRAKES DATA:{"brakes":{"temp_fahrenheit_avg":212.0,"temp_fahrenheit":302.0,"pressure_psi":217.545}}
+brakes;1000;{"temp": 30, "pressure":1500, "msg":5}
+Results:3
+ACTION:"SEND" DEST:BD TOPIC:---RELAX--- DATA:{"engine":{"temp":60,"msg":11},"brakes":{"temp":30}}
+ACTION:"SEND" DEST:starlord TOPIC:ALARM DATA:{"engine":{"temp":60,"msg":11}}
+ACTION:"SEND" DEST:starlord TOPIC:BRAKES DATA:{"brakes":{"temp_fahrenheit_avg":170.0,"temp_fahrenheit":86.0,"pressure_psi":217.545}}
+engine;1000;{"temp": 100, "msg":12}
+Results:4
+ACTION:"SEND" DEST:BD TOPIC:---RELAX--- DATA:{"engine":{"temp":100,"msg":12},"brakes":{"temp":30}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/TEMP_CHANGED_10 DATA:{"engine":{"temp":100,"msg":12}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/TEMP_50_Alert-1 DATA:{"engine":{"temp":100,"msg":12}}
+ACTION:"SEND" DEST:starlord TOPIC:ALARM DATA:{"engine":{"temp":100,"msg":12}}
+engine;1000;{"msg":13}
+Results:3
+ACTION:"SEND" DEST:BD TOPIC:---RELAX--- DATA:{"engine":{"temp":100,"msg":13},"brakes":{"temp":30}}
+ACTION:"SEND" DEST:starlord TOPIC:ALARM DATA:{"engine":{"temp":100,"msg":13}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/TEMP_CHANGED_1 DATA:[100, 13, {"x":33.0}]
+engine;1000;{"temp": 100, "msg":14}
+Results:3
+ACTION:"SEND" DEST:BD TOPIC:---RELAX--- DATA:{"engine":{"temp":100,"msg":14},"brakes":{"temp":30}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/TEMP_50_Alert-1 DATA:{"engine":{"temp":100,"msg":14}}
+ACTION:"SEND" DEST:starlord TOPIC:ALARM DATA:{"engine":{"temp":100,"msg":14}}
+engine;1000;{"msg":15}
+Results:2
+ACTION:"SEND" DEST:BD TOPIC:---RELAX--- DATA:{"engine":{"temp":100,"msg":15},"brakes":{"temp":30}}
+ACTION:"SEND" DEST:starlord TOPIC:ALARM DATA:{"engine":{"temp":100,"msg":15}}
+engine;1000;{"temp": 100, "msg":16}
+Results:3
+ACTION:"SEND" DEST:BD TOPIC:---RELAX--- DATA:{"engine":{"temp":100,"msg":16},"brakes":{"temp":30}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/TEMP_50_Alert-1 DATA:{"engine":{"temp":100,"msg":16}}
+ACTION:"SEND" DEST:starlord TOPIC:ALARM DATA:{"engine":{"temp":100,"msg":16}}
+engine;1000;{"temp": 60, "msg":17}
+Results:4
+ACTION:"SEND" DEST:BD TOPIC:---RELAX--- DATA:{"engine":{"temp":60,"msg":17},"brakes":{"temp":30}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/TEMP_CHANGED_10 DATA:{"engine":{"temp":60,"msg":17}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/TEMP_50_Alert-1 DATA:{"engine":{"temp":60,"msg":17}}
+ACTION:"SEND" DEST:starlord TOPIC:ALARM DATA:{"engine":{"temp":60,"msg":17}}
+engine;1000;{"msg":18}
+Results:3
+ACTION:"SEND" DEST:BD TOPIC:---RELAX--- DATA:{"engine":{"temp":60,"msg":18},"brakes":{"temp":30}}
+ACTION:"SEND" DEST:starlord TOPIC:ALARM DATA:{"engine":{"temp":60,"msg":18}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/TEMP_CHANGED_1 DATA:[60, 18, {"x":33.0}]
+engine;1000;{"temp": 100, "msg":19}
+Results:4
+ACTION:"SEND" DEST:BD TOPIC:---RELAX--- DATA:{"engine":{"temp":100,"msg":19},"brakes":{"temp":30}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/TEMP_CHANGED_10 DATA:{"engine":{"temp":100,"msg":19}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/TEMP_50_Alert-1 DATA:{"engine":{"temp":100,"msg":19}}
+ACTION:"SEND" DEST:starlord TOPIC:ALARM DATA:{"engine":{"temp":100,"msg":19}}
+engine;1000;{"temp": 100, "msg":20}
+Results:3
+ACTION:"SEND" DEST:BD TOPIC:---RELAX--- DATA:{"engine":{"temp":100,"msg":20},"brakes":{"temp":30}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/TEMP_50_Alert-1 DATA:{"engine":{"temp":100,"msg":20}}
+ACTION:"SEND" DEST:starlord TOPIC:ALARM DATA:{"engine":{"temp":100,"msg":20}}
+brakes;1000;{"temp": 130, "pressure":1500, "msg":6}
+Results:3
+ACTION:"SEND" DEST:BD TOPIC:---RELAX--- DATA:{"engine":{"temp":100,"msg":20},"brakes":{"temp":130}}
+ACTION:"SEND" DEST:starlord TOPIC:ALARM DATA:{"engine":{"temp":100,"msg":20}}
+ACTION:"SEND" DEST:starlord TOPIC:BRAKES DATA:{"brakes":{"temp_fahrenheit_avg":266.0,"temp_fahrenheit":266.0,"pressure_psi":217.545}}
+brakes;1000;{"temp": 40, "pressure":1500, "msg":7}
+Results:3
+ACTION:"SEND" DEST:BD TOPIC:---RELAX--- DATA:{"engine":{"temp":100,"msg":20},"brakes":{"temp":40}}
+ACTION:"SEND" DEST:starlord TOPIC:ALARM DATA:{"engine":{"temp":100,"msg":20}}
+ACTION:"SEND" DEST:starlord TOPIC:BRAKES DATA:{"brakes":{"temp_fahrenheit_avg":185.0,"temp_fahrenheit":104.0,"pressure_psi":217.545}}
+brakes;1000;{"temp": 30, "pressure":1500, "msg":8}
+Results:4
+ACTION:"SEND" DEST:BD TOPIC:---RELAX--- DATA:{"engine":{"temp":100,"msg":20},"brakes":{"temp":30}}
+ACTION:"SEND" DEST:starlord TOPIC:ALARM DATA:{"engine":{"temp":100,"msg":20}}
+ACTION:"SEND" DEST:starlord TOPIC:BRAKES DATA:{"brakes":{"temp_fahrenheit_avg":152.0,"temp_fahrenheit":86.0,"pressure_psi":217.545}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/TEMP_CHANGED_1 DATA:[100, 20, {"x":33.0}]
+engine;1000;{"temp": 60, "msg":21}
+Results:4
+ACTION:"SEND" DEST:BD TOPIC:---RELAX--- DATA:{"engine":{"temp":60,"msg":21},"brakes":{"temp":30}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/TEMP_CHANGED_10 DATA:{"engine":{"temp":60,"msg":21}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/TEMP_50_Alert-1 DATA:{"engine":{"temp":60,"msg":21}}
+ACTION:"SEND" DEST:starlord TOPIC:ALARM DATA:{"engine":{"temp":60,"msg":21}}
+engine;1000;{"temp": 100, "msg":22}
+Results:4
+ACTION:"SEND" DEST:BD TOPIC:---RELAX--- DATA:{"engine":{"temp":100,"msg":22},"brakes":{"temp":30}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/TEMP_CHANGED_10 DATA:{"engine":{"temp":100,"msg":22}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/TEMP_50_Alert-1 DATA:{"engine":{"temp":100,"msg":22}}
+ACTION:"SEND" DEST:starlord TOPIC:ALARM DATA:{"engine":{"temp":100,"msg":22}}
+engine;1000;{"temp": 100, "msg":23}
+Results:4
+ACTION:"SEND" DEST:BD TOPIC:---RELAX--- DATA:{"engine":{"temp":100,"msg":23},"brakes":{"temp":30}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/TEMP_50_Alert-1 DATA:{"engine":{"temp":100,"msg":23}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/TEMP_CHANGED DATA:{"engine":{"temp":100,"msg":23},"temp_avg":86.66666666666667}
+ACTION:"SEND" DEST:starlord TOPIC:ALARM DATA:{"engine":{"temp":100,"msg":23}}
+engine;1000;{"temp": 10, "msg":24}
+Results:3
+ACTION:"SEND" DEST:BD TOPIC:---RELAX--- DATA:{"engine":{"temp":10,"msg":24},"brakes":{"temp":30}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/TEMP_CHANGED_10 DATA:{"engine":{"temp":10,"msg":24}}
+ACTION:"SEND" DEST:starlord TOPIC:ALARM DATA:{"engine":{"temp":10,"msg":24}}
+engine;1000;{"temp": 100, "msg":25}
+Results:4
+ACTION:"SEND" DEST:BD TOPIC:---RELAX--- DATA:{"engine":{"temp":100,"msg":25},"brakes":{"temp":30}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/TEMP_CHANGED_10 DATA:{"engine":{"temp":100,"msg":25}}
+ACTION:"SEND" DEST:starlord TOPIC:ALARM DATA:{"engine":{"temp":100,"msg":25}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/TEMP_CHANGED_1 DATA:[100, 25, {"x":33.0}]
+engine;1000;{"temp": 10, "msg":26}
+Results:3
+ACTION:"SEND" DEST:BD TOPIC:---RELAX--- DATA:{"engine":{"temp":10,"msg":26},"brakes":{"temp":30}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/TEMP_CHANGED_10 DATA:{"engine":{"temp":10,"msg":26}}
+ACTION:"SEND" DEST:starlord TOPIC:ALARM DATA:{"engine":{"temp":10,"msg":26}}
+engine;1000;{"temp": 1, "msg":27}
+Results:2
+ACTION:"SEND" DEST:BD TOPIC:---RELAX--- DATA:{"engine":{"temp":1,"msg":27},"brakes":{"temp":30}}
+ACTION:"SEND" DEST:starlord TOPIC:ALARM DATA:{"engine":{"temp":1,"msg":27}}
+engine;1000;{"temp": 10, "msg":28}
+Results:2
+ACTION:"SEND" DEST:BD TOPIC:---RELAX--- DATA:{"engine":{"temp":10,"msg":28},"brakes":{"temp":30}}
+ACTION:"SEND" DEST:starlord TOPIC:ALARM DATA:{"engine":{"temp":10,"msg":28}}
+engine;1000;{"temp": 100, "msg":29}
+Results:3
+ACTION:"SEND" DEST:BD TOPIC:---RELAX--- DATA:{"engine":{"temp":100,"msg":29},"brakes":{"temp":30}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/TEMP_CHANGED_10 DATA:{"engine":{"temp":100,"msg":29}}
+ACTION:"SEND" DEST:starlord TOPIC:ALARM DATA:{"engine":{"temp":100,"msg":29}}
+engine;1000;{"temp": 10, "msg":30}
+Results:4
+ACTION:"SEND" DEST:BD TOPIC:---RELAX--- DATA:{"engine":{"temp":10,"msg":30},"brakes":{"temp":30}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/TEMP_CHANGED_10 DATA:{"engine":{"temp":10,"msg":30}}
+ACTION:"SEND" DEST:starlord TOPIC:ALARM DATA:{"engine":{"temp":10,"msg":30}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/TEMP_CHANGED_1 DATA:[10, 30, {"x":33.0}]
+brakes;1000;{"temp": 30, "pressure":500, "msg":31}
+Results:3
+ACTION:"SEND" DEST:BD TOPIC:---RELAX--- DATA:{"engine":{"temp":10,"msg":30},"brakes":{"temp":30}}
+ACTION:"SEND" DEST:starlord TOPIC:ALARM DATA:{"engine":{"temp":10,"msg":30}}
+ACTION:"SEND" DEST:starlord TOPIC:BRAKES DATA:{"brakes":{"temp_fahrenheit_avg":86.0,"temp_fahrenheit":86.0,"pressure_psi":72.515}}
+brakes;1000;{"temp": 60, "pressure":1500, "msg":32}
+Results:3
+ACTION:"SEND" DEST:BD TOPIC:---RELAX--- DATA:{"engine":{"temp":10,"msg":30},"brakes":{"temp":60}}
+ACTION:"SEND" DEST:starlord TOPIC:ALARM DATA:{"engine":{"temp":10,"msg":30}}
+ACTION:"SEND" DEST:starlord TOPIC:BRAKES DATA:{"brakes":{"temp_fahrenheit_avg":113.0,"temp_fahrenheit":140.0,"pressure_psi":217.545}}
+brakes;1000;{"temp": 10, "pressure":1300, "msg":33}
+Results:2
+ACTION:"SEND" DEST:BD TOPIC:---RELAX--- DATA:{"engine":{"temp":10,"msg":30},"brakes":{"temp":10}}
+ACTION:"SEND" DEST:starlord TOPIC:ALARM DATA:{"engine":{"temp":10,"msg":30}}
+brakes;1000;{"temp": 100, "pressure":300, "msg":4}
+Results:2
+ACTION:"SEND" DEST:BD TOPIC:---RELAX--- DATA:{"engine":{"temp":10,"msg":30},"brakes":{"temp":100}}
+ACTION:"SEND" DEST:starlord TOPIC:ALARM DATA:{"engine":{"temp":10,"msg":30}}

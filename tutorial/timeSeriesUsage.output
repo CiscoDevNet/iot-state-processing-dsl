@@ -1,0 +1,25 @@
+RulesFile:timeSeriesUsage.rules
+engine;1000;{"temp": 1000, "msg":1}
+Results:1
+ACTION:"SEND" DEST:SuperMan TOPIC:help DATA:{"engine":{"temp":1000,"msg":1}}
+engine;1000;{"temp": 1020, "msg":2}
+Results:1
+ACTION:"SEND" DEST:SuperMan TOPIC:help DATA:{"engine":{"temp":1020,"msg":2}}
+engine;1000;{"temp": 1040, "msg":3}
+Results:1
+ACTION:"SEND" DEST:SuperMan TOPIC:help DATA:{"engine":{"temp":1040,"msg":3}}
+engine;1000;{"temp": 1060, "msg":4}
+Results:1
+ACTION:"SEND" DEST:SuperMan TOPIC:help DATA:{"engine":{"temp":1060,"msg":4}}
+engine;1000;{"temp": 900, "msg":5}
+Results:1
+ACTION:"SEND" DEST:SuperMan TOPIC:help DATA:{"engine":{"temp":900,"msg":5}}
+engine;1000;{"temp": 800, "msg":6}
+Results:1
+ACTION:"SEND" DEST:SuperMan TOPIC:help DATA:{"engine":{"temp":800,"msg":6}}
+brakes;1000;{"temp": 1100, "msg":7}
+Results:1
+ACTION:"SEND" DEST:SuperMan TOPIC:help DATA:{"engine":{"temp":800,"msg":6}}
+engine;1000;{"pressure": 800, "msg":8}
+Results:1
+ACTION:"SEND" DEST:SuperMan TOPIC:help DATA:{"engine":{"temp":800,"pressure":800,"msg":8}}

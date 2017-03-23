@@ -1,0 +1,24 @@
+RulesFile:whenInMsg.rules
+engine;100;{"temp": 10, "msg":1}
+Results:1
+ACTION:"SEND" DEST:DefaultProfileName TOPIC:high2 DATA:{"engine":{"temp":10,"msg":1}}
+brakes;100;{"temp": 20, "msg":2}
+Results:1
+ACTION:"SEND" DEST:DefaultProfileName TOPIC:high1 DATA:{"brakes":{"msg":2,"temp":20}}
+engine;100;{"temp": 30, "msg":3}
+Results:1
+ACTION:"SEND" DEST:DefaultProfileName TOPIC:high2 DATA:{"engine":{"temp":30,"msg":3}}
+brakes;100;{"temp": 2, "msg":4}
+Results:0
+brakes;100;{"temp": 40, "msg":5}
+Results:1
+ACTION:"SEND" DEST:DefaultProfileName TOPIC:high1 DATA:{"brakes":{"msg":5,"temp":40}}
+engine;100;{"temp": 3, "msg":6}
+Results:0
+engine;100;{"temp": 1100, "msg":7}
+Results:1
+ACTION:"SEND" DEST:DefaultProfileName TOPIC:high2 DATA:{"engine":{"temp":1100,"msg":7}}
+engine;100;{"pressure": 800, "msg":8}
+Results:0
+brakes;100;{"pressure": 40, "msg":9}
+Results:0

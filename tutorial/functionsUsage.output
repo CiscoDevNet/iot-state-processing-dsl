@@ -1,0 +1,11 @@
+RulesFile:functionsUsage.rules
+engine;1000;{"temp": 1000, "msg":1}
+Results:0
+engine;1000;{"temp": 1020, "msg":2}
+Results:0
+engine;1000;{"tire-temp": 1020, "msg":2}
+Results:0
+brakes;1000;{"temp": "1000", "msg":1}
+Results:0
+brakes;1000;{"temp": "1020", "msg":2}
+Results:0

@@ -1,0 +1,53 @@
+--Asset Name;Delay;Message
+brakes;1000;{"temp": 30, "pressure":1500, "msg":0}
+engine;250;{"temp": 60, "msg":2}
+engine;250;{"temp": 100, "msg":3}
+engine;1000;{"temp": 10, "msg":4}
+engine;1000;{"temp": 60, "msg":5}
+brakes;1000;{"temp": 30, "pressure":1500, "msg":1}
+engine;1000;{"temp": 10,  "msg":6}
+engine;1000;{"temp": 10, "msg":7}
+brakes;1000;{"temp": 200, "pressure":1500, "msg":2}
+engine;1000;{"temp": 100, "msg":8}
+engine;1000;{"temp": 60, "msg":9}
+engine;1000;{"temp": 100, "msg":10}
+engine;1000;{"temp": 60, "msg":11}
+brakes;1000;{"temp": 50, "pressure":1500, "msg":3}
+brakes;1000;{"temp": 150, "pressure":1500, "msg":4}
+brakes;1000;{"temp": 30, "pressure":1500, "msg":5}
+engine;1000;{"temp": 100, "msg":12}
+engine;1000;{"msg":13}
+engine;1000;{"temp": 100, "msg":14}
+engine;1000;{"msg":15}
+engine;1000;{"temp": 100, "msg":16}
+engine;1000;{"temp": 60, "msg":17}
+engine;1000;{"msg":18}
+engine;1000;{"temp": 100, "msg":19}
+engine;1000;{"temp": 100, "msg":20}
+brakes;1000;{"temp": 130, "pressure":1500, "msg":6}
+brakes;1000;{"temp": 40, "pressure":1500, "msg":7}
+brakes;1000;{"temp": 30, "pressure":1500, "msg":8}
+engine;1000;{"temp": 60, "msg":21}
+engine;1000;{"temp": 100, "msg":22}
+engine;1000;{"temp": 100, "msg":23}
+engine;1000;{"temp": 10, "msg":24}
+engine;1000;{"temp": 100, "msg":25}
+engine;1000;{"temp": 10, "msg":26}
+engine;1000;{"temp": 1, "msg":27}
+engine;1000;{"temp": 10, "msg":28}
+engine;1000;{"temp": 100, "msg":29}
+engine;1000;{"temp": 10, "msg":30}
+brakes;1000;{"temp": 30, "pressure":500, "msg":31}
+brakes;1000;{"temp": 60, "pressure":1500, "msg":32}
+brakes;1000;{"temp": 10, "pressure":1300, "msg":33}
+brakes;1000;{"temp": 100, "pressure":300, "msg":4}
+
+
+
+
+
+
+
+
+
+

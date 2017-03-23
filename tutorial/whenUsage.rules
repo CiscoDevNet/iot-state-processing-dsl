@@ -1,0 +1,44 @@
+-- Usage file for various components in DSL
+--	1. when
+
+-- Run it with genericData.data
+
+LOG "########################################Start of Rule Application for a Message########################################";
+init {
+	high_limit=1020;
+	low_limit=1000;
+	i=2;
+}
+
+--'When' usage
+--$$$$$$$$$$$$$$$$
+
+--Simple when usage. The Rule id is "Rule01"
+--============================================================================================================================================================
+when<Rule01> i>0 then LOG "i is greater than 0:Rule Id:" + rule_id();
+
+--Decision based on an individual component in message. The Rule id is not defined. So a randomly generated RuleId will be used
+--============================================================================================================================================================
+when engine.timestamp in-msg then LOG "--------- MSG from Asset: Engine: "+ subtree(engine) + ":Rule Id:" + rule_id() ;
+
+--Log when temperature is outside a range i.e. temp>1020 or temp<1000
+--============================================================================================================================================================
+when<RuleHigh01> msg(engine.temp) > high_limit then LOG "High Alert" + ":Rule Id:" + rule_id() ;
+when<RuleLow01> msg(engine.temp) < low_limit then LOG "Low Alert" + ":Rule Id:" + rule_id() ;
+
+--Log when temperature is inside a range i.e. 1000<temp<1020
+--============================================================================================================================================================
+low_limit = 500;
+when<RuleRange> msg(engine.temp) < high_limit && msg(engine.temp) > low_limit then {
+	LOG "Within Range Alert" + ":Rule Id:" + rule_id() ;
+}
+
+--Log "Hi" when temperature is greater than 100
+--Log "Bye" when temperature is less than 100
+--============================================================================================================================================================
+low_limit = 950;
+when<RuleIf> msg(engine.temp) > low_limit  then {
+	LOG "Hi If" + ":Rule Id:" + rule_id() ;
+} else when<RuleElse> msg(engine.temp) < low_limit  then {
+	LOG "Bye Else" + ":Rule Id:" + rule_id() ;
+}

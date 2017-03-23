@@ -1,0 +1,37 @@
+RulesFile:forUsage.rules
+engine;1000;{"temp": 1000, "msg":1}
+Results:0
+engine;1000;{"temp": 1020, "msg":2}
+Results:0
+engine;1000;{"temp": 1040, "msg":3}
+Results:3
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/i JSON DATA:{"engine":{"temp":1040,"msg":3}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/i PAYLOAD DATA:[1040]
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/i PAYLOAD DATA:[FIRE IN THE BREAKS!!!!!!! RUN]
+engine;1000;{"temp": 1060, "msg":4}
+Results:4
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/i JSON DATA:{"engine":{"temp":1060,"msg":4}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/i PAYLOAD DATA:[1060]
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/i PAYLOAD DATA:[FIRE IN THE BREAKS!!!!!!! RUN]
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/TEMP_50_Alert-1 DATA:{"engine":{"temp":1060,"msg":4}}
+engine;1000;{"temp": 900, "msg":5}
+Results:3
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/i JSON DATA:{"engine":{"temp":900,"msg":5}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/i PAYLOAD DATA:[900]
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/i PAYLOAD DATA:[FIRE IN THE BREAKS!!!!!!! RUN]
+engine;1000;{"temp": 800, "msg":6}
+Results:4
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/i JSON DATA:{"engine":{"temp":800,"msg":6}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/i PAYLOAD DATA:[800]
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/i PAYLOAD DATA:[FIRE IN THE BREAKS!!!!!!! RUN]
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/TEMP_50_Alert-2 DATA:{"engine":{"temp":800,"msg":6}}
+brakes;1000;{"temp": 1100, "msg":7}
+Results:3
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/i JSON DATA:{"engine":{"temp":800,"msg":6}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/i PAYLOAD DATA:[800]
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/i PAYLOAD DATA:[FIRE IN THE BREAKS!!!!!!! RUN]
+engine;1000;{"pressure": 800, "msg":8}
+Results:3
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/i JSON DATA:{"engine":{"temp":800,"pressure":800,"msg":8}}
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/i PAYLOAD DATA:[800]
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/i PAYLOAD DATA:[FIRE IN THE BREAKS!!!!!!! RUN]

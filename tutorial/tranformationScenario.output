@@ -1,0 +1,19 @@
+RulesFile:tranformationScenario.rules
+engine;1000;{"temp": 1000, "msg":1}
+Results:0
+engine;1000;{"temp": 1020, "msg":2}
+Results:0
+engine;1000;{"temp": 1040, "msg":3}
+Results:1
+ACTION:"SEND" DEST:starlord TOPIC:Engine DATA:{"engine":{"temp_fahrenheit":1904.0,"temp_fahrenheit_avg":1904.0}}
+engine;1000;{"temp": 1060, "msg":4}
+Results:1
+ACTION:"SEND" DEST:starlord TOPIC:Engine DATA:{"engine":{"temp_fahrenheit":1940.0,"temp_fahrenheit_avg":1922.0}}
+engine;1000;{"temp": 900, "msg":5}
+Results:0
+engine;1000;{"temp": 800, "msg":6}
+Results:0
+brakes;1000;{"temp": 1100, "msg":7}
+Results:0
+engine;1000;{"pressure": 800, "msg":8}
+Results:0

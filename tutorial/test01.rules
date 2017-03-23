@@ -1,0 +1,21 @@
+-- example 02
+
+init i=1;
+
+
+when<xxx> i>0 then when rule_time()>1 then print "QQQQ RULE<"+rule_id()+"> TIME: " + rule_time();
+
+when<aaa> i>1 then {
+      throttle<t2> (2) print "aaa RULE<"+rule_id()+"> TIME: " + rule_time();
+      print "0 RULE<"+rule_id()+"> TIME: " + rule_time();
+         when<bbb> i>5 then {
+            i=0;
+            print "inside RULE<"+rule_id()+"> TIME: " + rule_time();
+         }
+      print "1 RULE<"+rule_id()+"> TIME: " + rule_time();
+}
+
+
+
+i = i + 1;
+print i;

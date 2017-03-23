@@ -1,0 +1,20 @@
+RulesFile:throttleUsage.rules
+engine;1000;{"temp": 1000, "msg":1}
+Results:0
+engine;1000;{"temp": 1020, "msg":2}
+Results:1
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/TEMP_CHANGED_10 DATA:{"engine":{"temp":1020,"msg":2}}
+engine;1000;{"temp": 1040, "msg":3}
+Results:0
+engine;1000;{"temp": 1060, "msg":4}
+Results:0
+engine;1000;{"temp": 900, "msg":5}
+Results:1
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/TEMP_CHANGED_50 DATA:{"engine":{"temp":900,"msg":5}}
+engine;1000;{"temp": 800, "msg":6}
+Results:1
+ACTION:"SEND" DEST:starlord TOPIC:EMAIL/TEMP_CHANGED_50 DATA:{"engine":{"temp":800,"msg":6}}
+brakes;1000;{"temp": 1100, "msg":7}
+Results:0
+engine;1000;{"pressure": 800, "msg":8}
+Results:0
