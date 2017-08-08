@@ -1,9 +1,31 @@
 RulesFile:complexPayload.rules
+eng;10;{"temp-k": 25}
+Results:3
+ACTION:"SEND" DEST:dest TOPIC:json with - in names DATA:{"eng":{"temp":50.0,"ops-computed":{"sub":20.0,"add":30.0,"sub5":575.0},"kkk":2.0,"temp-k-5":580.0,"temp-k":25}}
+ACTION:"SEND" DEST:dest TOPIC:MessageComponentAccess DATA:{}
+ACTION:"SEND" DEST:dest TOPIC:arrayData DATA:{}
+eng;10;{"temp-k": 255}
+Results:3
+ACTION:"SEND" DEST:dest TOPIC:json with - in names DATA:{"eng":{"temp":510.0,"ops-computed":{"sub":250.0,"add":260.0,"sub5":805.0},"kkk":2.0,"temp-k-5":810.0,"temp-k":255}}
+ACTION:"SEND" DEST:dest TOPIC:MessageComponentAccess DATA:{}
+ACTION:"SEND" DEST:dest TOPIC:arrayData DATA:{}
 engine;1000;{"temp": 1000, "msg":1}
-Results:0
+Results:3
+ACTION:"SEND" DEST:dest TOPIC:json with - in names DATA:{"eng":{"temp":510.0,"ops-computed":{"sub":250.0,"add":260.0,"sub5":805.0},"kkk":2.0,"temp-k-5":810.0,"temp-k":255},"engine":{"temp":1000,"msg":1}}
+ACTION:"SEND" DEST:dest TOPIC:MessageComponentAccess DATA:{"message":{"engine":{"temp":1000}}}
+ACTION:"SEND" DEST:dest TOPIC:arrayData DATA:{}
 brakes;1000;{"temp": 1200, "msg":2}
-Results:0
+Results:3
+ACTION:"SEND" DEST:dest TOPIC:json with - in names DATA:{"eng":{"temp":510.0,"ops-computed":{"sub":250.0,"add":260.0,"sub5":805.0},"kkk":2.0,"temp-k-5":810.0,"temp-k":255},"engine":{"temp":1000,"msg":1}}
+ACTION:"SEND" DEST:dest TOPIC:MessageComponentAccess DATA:{"message":{"breaks":{"temp":1200},"engine":{"temp":1000}}}
+ACTION:"SEND" DEST:dest TOPIC:arrayData DATA:{}
 engine;100;{"sparkPlug":{"temp": 1500, "msg":20}, "valves":{"temp": 1600, "msg":21}}
-Results:0
+Results:3
+ACTION:"SEND" DEST:dest TOPIC:json with - in names DATA:{"eng":{"temp":510.0,"ops-computed":{"sub":250.0,"add":260.0,"sub5":805.0},"temp-k":255,"kkk":2.0,"temp-k-5":810.0},"engine":{"sparkPlug":{"temp":1500,"msg":20},"valves":{"temp":1600,"msg":21},"temp":1000,"msg":1}}
+ACTION:"SEND" DEST:dest TOPIC:MessageComponentAccess DATA:{"message":{"breaks":{"temp":1200},"engine":{"valve":{"temp":1600},"temp":1000},"sparkPlug":{"temp":1500}}}
+ACTION:"SEND" DEST:dest TOPIC:arrayData DATA:{}
 AC;100;{"temp": [{"value": 100,"msg": 1}, {"value": 200,"msg": 2}, {"value": 300,"msg": 3}, {"value": 400,"msg": 4}]}
-Results:0
+Results:3
+ACTION:"SEND" DEST:dest TOPIC:json with - in names DATA:{"eng":{"temp":510.0,"ops-computed":{"sub":250.0,"add":260.0,"sub5":805.0},"temp-k":255,"kkk":2.0,"temp-k-5":810.0},"engine":{"sparkPlug":{"temp":1500,"msg":20},"valves":{"temp":1600,"msg":21},"temp":1000,"msg":1}}
+ACTION:"SEND" DEST:dest TOPIC:MessageComponentAccess DATA:{"message":{"breaks":{"temp":1200},"engine":{"valve":{"temp":1600},"temp":1000},"sparkPlug":{"temp":1500}}}
+ACTION:"SEND" DEST:dest TOPIC:arrayData DATA:{"AC":{"temp":[{"value":100,"msg":1},{"value":200,"msg":2}]}}

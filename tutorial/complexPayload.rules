@@ -7,19 +7,35 @@ LOG "########################################Start of Rule Application for a Mes
 --'Access Message Components'
 --$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
+
+LOG "--------- Dash in json field name. In message:" + msg(eng.temp-k) + ", as variable:" + eng.temp-k ;
+eng.temp-k-5 = eng.temp-k + 555;
+eng.kkk = 5-3 ;
+eng.temp = eng.temp-k * 2;
+eng.ops-computed.add = eng.temp-k + 5 ;
+eng.ops-computed.sub = eng.temp-k - 5 ;
+eng.ops-computed.sub5 = eng.temp-k-5 - 5 ;
+SEND TO "dest" TOPIC "json with - in names" JSON eng ;
+
 --Get an individual component from existing message
 --============================================================================================================================================================
 LOG "--------- MSG from Asset: Engine Temp: "+ msg(engine.temp) ;
 LOG "--------- MSG from Asset: Brakes Temp: "+ msg(brakes.temp) ;
 LOG "--------- MSG from Asset: Engine Spark Plug Temp: "+ msg(engine.sparkPlug.temp) ;
 LOG "--------- MSG from Asset: Engine Valve Temp: "+ msg(engine.valves.temp) ;
+-- SEND requires IDs, but not expressions. So, need temp variables
+message.engine.temp = msg(engine.temp) ;
+message.breaks.temp = msg(brakes.temp) ;
+message.sparkPlug.temp = msg(engine.sparkPlug.temp) ;
+message.engine.valve.temp = msg(engine.valves.temp) ;
+SEND TO "dest" TOPIC "MessageComponentAccess" JSON message.engine.temp, message.breaks.temp, message.sparkPlug.temp, message.engine.valve.temp ;
 
 --Array inside payload
 --============================================================================================================================================================
---a = "AC.temp[0]" ;
---LOG "--------- MSG from Asset: Engine Different Temp: "+ msg(AC.temp.value) ;
---LOG "--------- MSG from Asset: Engine Different Temp: "+ msg(AC.temp[0].value) ;
---LOG "--------- MSG from Asset: Engine Different Temp: "+ msg(AC.temp(0).value) ;
---LOG "--------- MSG from Asset: Engine Different Temp: " + a.value ;
---LOG "--------- MSG from Asset: Engine Different Temp: "+ AC.temp[0].value ;
---SEND "hi" JSON AC ;
+a = msg(AC.temp[0].value) ;
+LOG "--------- MSG from Asset: a=" + a ;
+LOG "--------- MSG from Asset: msg(AC.temp[1].value)="+ msg(AC.temp[1].value) ;
+LOG "--------- MSG from Asset: AC.temp[0].value="+ AC.temp[0].value ;
+LOG "--------- MSG from Asset: this should fail... msg(AC.temp[5].value)="+ msg(AC.temp[5].value) ;
+LOG "--------- MSG from Asset: this should fail... AC.temp[4].value="+ AC.temp[4].value ;
+SEND TO "dest" TOPIC "arrayData" JSON AC.temp[0],AC.temp[1] ;

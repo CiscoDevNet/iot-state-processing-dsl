@@ -1,4 +1,6 @@
 --Asset Name;Delay;Message
+eng;10;{"temp-k": 25}
+eng;10;{"temp-k": 255}
 engine;1000;{"temp": 1000, "msg":1}
 brakes;1000;{"temp": 1200, "msg":2}
 engine;100;{"sparkPlug":{"temp": 1500, "msg":20}, "valves":{"temp": 1600, "msg":21}}

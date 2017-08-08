@@ -1,0 +1,19 @@
+--dev1;1000;{"stocks": {100, 150, 200}}
+--dev1;1000;{"colors":{"white", "black", "red"}}
+--dev1;1000;{"prices": {50, 30, 20}}
+dresses;1000;{"stocks": 100}
+dresses;1000;{stocks:20}
+dresses;1000;{stocks:52}
+dresses;1000;{stocks:19}
+dresses;1000;{stocks:46}
+dresses;1000;{stocks:150}
+dresses;1000;{stocks:70}
+dresses;1000;{stocks:20}
+dresses;1000;{stocks:40}
+dresses;1000;{stocks:80}
+dresses;1000;{stocks:30}
+dresses;1000;{stocks:10}
+dresses;1000;{stocks:2}
+dresses;1000;{stocks:8}
+dresses;1000;{stocks:7}
+

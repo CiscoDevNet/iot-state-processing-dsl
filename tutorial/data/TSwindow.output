@@ -1,0 +1,163 @@
+RulesFile:TSwindow.rules
+car1;1000;{"speed": 2}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":3.21868,"kmPerHour":3.21868}}
+car1;1000;{"speed": 8}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":8.0467,"kmPerHour":12.87472}}
+car1;1000;{"speed": 2}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":6.437359999999999,"kmPerHour":3.21868}}
+car1;1000;{"speed": 8}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":9.656039999999999,"kmPerHour":12.87472}}
+car1;1000;{"speed": 2}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":6.437359999999999,"kmPerHour":3.21868}}
+car1;1000;{"speed": 3}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":6.973806666666666,"kmPerHour":4.82802}}
+car1;1000;{"speed": 6}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":5.900913333333333,"kmPerHour":9.65604}}
+car1;1000;{"speed": 8}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":9.119593333333333,"kmPerHour":12.87472}}
+car1;1000;{"speed": 8}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":11.801826666666665,"kmPerHour":12.87472}}
+car1;1000;{"speed": 9}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":13.411166666666665,"kmPerHour":14.48406}}
+car1;1000;{"speed": 10}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":14.484059999999998,"kmPerHour":16.0934}}
+car1;1000;{"speed": 8}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":14.484059999999998,"kmPerHour":12.87472}}
+car1;1000;{"speed": 12}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":16.0934,"kmPerHour":19.31208}}
+car1;1000;{"speed": 16}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":19.312079999999998,"kmPerHour":25.74944}}
+car1;1000;{"speed": 12}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":21.45786666666666,"kmPerHour":19.31208}}
+car1;1000;{"speed": 17}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":24.140099999999993,"kmPerHour":27.35878}}
+car1;1000;{"speed": 12}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":21.994313333333327,"kmPerHour":19.31208}}
+car1;1000;{"speed": 19}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":25.749439999999993,"kmPerHour":30.57746}}
+car1;1000;{"speed": 22}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":28.431673333333325,"kmPerHour":35.40548}}
+car1;1000;{"speed": 28}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":37.01481999999999,"kmPerHour":45.06152}}
+car1;1000;{"speed": 21}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":38.08771333333333,"kmPerHour":33.79614}}
+car1;1000;{"speed": 28}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":41.30639333333333,"kmPerHour":45.06152}}
+car1;1000;{"speed": 23}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":38.624159999999996,"kmPerHour":37.01482}}
+car1;1000;{"speed": 38}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":47.74375333333333,"kmPerHour":61.15492}}
+car1;1000;{"speed": 35}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":51.49887999999999,"kmPerHour":56.3269}}
+car1;1000;{"speed": 38}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":59.545579999999994,"kmPerHour":61.15492}}
+car1;1000;{"speed": 39}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":60.08202666666666,"kmPerHour":62.76426}}
+car1;1000;{"speed": 33}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":59.00913333333333,"kmPerHour":53.10822}}
+car1;1000;{"speed": 42}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":61.154920000000004,"kmPerHour":67.59228}}
+car1;1000;{"speed": 58}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":71.34740666666666,"kmPerHour":93.34172}}
+car1;1000;{"speed": 52}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":81.53989333333332,"kmPerHour":83.68568}}
+car1;1000;{"speed": 53}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":87.44080666666666,"kmPerHour":85.29502}}
+car1;1000;{"speed": 52}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":84.22212666666665,"kmPerHour":83.68568}}
+car1;1000;{"speed": 54}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":85.29501999999998,"kmPerHour":86.90436}}
+car1;1000;{"speed": 52}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":84.75857333333333,"kmPerHour":83.68568}}
+car1;1000;{"speed": 45}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":81.00344666666666,"kmPerHour":72.4203}}
+car1;1000;{"speed": 52}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":79.93055333333332,"kmPerHour":83.68568}}
+car1;1000;{"speed": 56}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":82.07634,"kmPerHour":90.12304}}
+car1;1000;{"speed": 62}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":91.19593333333334,"kmPerHour":99.77908}}
+car1;1000;{"speed": 59}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":94.95106,"kmPerHour":94.95106}}
+car1;1000;{"speed": 42}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":87.44080666666667,"kmPerHour":67.59228}}
+car1;1000;{"speed": 48}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":79.93055333333335,"kmPerHour":77.24832}}
+car1;1000;{"speed": 50}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":75.10253333333334,"kmPerHour":80.467}}
+car1;1000;{"speed": 58}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":83.68568,"kmPerHour":93.34172}}
+car1;1000;{"speed": 51}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":85.29502000000001,"kmPerHour":82.07634}}
+car1;1000;{"speed": 56}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":88.51370000000001,"kmPerHour":90.12304}}
+car1;1000;{"speed": 62}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":90.65948666666668,"kmPerHour":99.77908}}
+car1;1000;{"speed": 64}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":97.63329333333336,"kmPerHour":102.99776}}
+car1;1000;{"speed": 62}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":100.85197333333333,"kmPerHour":99.77908}}
+car1;1000;{"speed": 63}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":101.38842,"kmPerHour":101.38842}}
+car1;1000;{"speed": 67}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":102.99775999999999,"kmPerHour":107.82578}}
+car1;1000;{"speed": 72}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":108.36222666666667,"kmPerHour":115.87248}}
+car1;1000;{"speed": 68}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":111.04446,"kmPerHour":109.43512}}
+car1;1000;{"speed": 70}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"car1":{"avg_kmPerHour":112.65379999999999,"kmPerHour":112.6538}}

@@ -1,0 +1,33 @@
+-- java -jar iot-state-processing-dsl-0.5-SNAPSHOT-all.jar -r data/accessData.rules -d data/accessData.data -o data/accessData.output -l info
+
+
+LOG msg(dresses.stocks);
+-----------TASK4: Use msg and prev-----------
+
+when<stocks> dresses.stocks in-msg THEN  { 
+	when<stocksup_> msg(dresses.stocks) - prev(dresses.stocks) > 0 then {
+		LOG "Import" ;
+	}
+	else {
+		LOG "We sold " + (prev(dresses.stocks) - msg(dresses.stocks)) + " dresses!";
+	}
+}
+-- there is no info about stocks, but there is info about the prices
+else when<prices> dresses.prices in-msg then { 
+	when<pricesup> msg(dresses.prices) - prev(dresses.prices) > 0 then {
+                LOG "Increase in price";
+        }
+        else {
+		LOG "Decrease in price";
+	}
+}
+
+-----------TASK5: use subtree-----------
+LOG subtree(dresses.stocks);
+LOG subtree(dresses.colors);
+LOG subtree(dresses.prices);
+LOG subtree(dresses);
+LOG subtree(dresses.brands);
+
+
+

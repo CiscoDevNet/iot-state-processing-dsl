@@ -4,7 +4,7 @@ Use the files in this tutorial to understand how rule sets can be used in IoTDC 
 - You can create multiple rule sets for your organization, and rule sets can be assigned to multiple data policies.
 - Rule sets can also include destinations where the data should be sent.  For example, if a sensor temperature exceeds 100º, send the data to a specific destination broker.
 
-##Summary steps
+## Summary steps
 
 To create rule sets:
 
@@ -21,7 +21,7 @@ To create rule sets:
 6. Create a data policy that uses the rule set. 
    - Go to **Data > Data Policies**.
 
-##What you can do with rule sets
+## What you can do with rule sets
 You can create rules sets that combine any of the following:
 
 |Data|Description|Example|
@@ -36,7 +36,7 @@ You can create rules sets that combine any of the following:
 - The engine sensor (asset) sends data to the gateway every 5 seconds.
 - The brakes sensor sends data to the gateway every 1 second.
 
-##File types in this tutorial
+## File types in this tutorial
 The attached rule set tutorial and examples provide a hands-on method to start creating your own rule sets. Each tutorial includes 3 types of files.
 
     *.rules — sample rule set with inline descriptions to help you understand the syntax. 
@@ -45,7 +45,10 @@ The attached rule set tutorial and examples provide a hands-on method to start c
 
 For example, open a .rules file and review the comment lines that begin with "–" to understand the corresponding syntax. Run the rule against the *.data file specified in the .rule file to produce the resulting data in the *.output file.
 
-##Example rule sets included in this tutorial
+## Learn how to write rules  
+To get started with the iot-state-processing-dsl language and writing your own rules, go to src/test/GettingStarted.md.  
+
+## Example rule sets included in this tutorial
 The following rule sets are included in the tutorial:
 
 |Example rule set|Description|
@@ -61,7 +64,7 @@ The following rule sets are included in the tutorial:
 |variableInitLogAccessMsg.rules|	Shows how to initialize variables, create logging statements, and access data inside observations|
 |whenUsage.rules|Shows the usage of conditionals|
 
-##How to test your rule sets
+## How to test your rule sets
 We highly recommended testing your rule set before adding it to the product.
 
 Use the **iot-state-processing-dsl-*version*-all.jar** tool to process a data sample using your draft rule set.

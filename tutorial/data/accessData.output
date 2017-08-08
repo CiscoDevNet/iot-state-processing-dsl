@@ -1,0 +1,19 @@
+RulesFile:accessData.rules
+dresses;1000;{"stocks": 100}
+Results:0
+dresses;1000;{"colors": white}
+Results:0
+dresses;1000;{prices:50}
+Results:0
+dresses;1000;{prices:40, stocks: 50}
+Results:0
+dresses;1000;{stocks:90, prices: 30}
+Results:0
+dresses;1000;{stocks:20}
+Results:0
+dresses;1000;{stocks:2}
+Results:0
+dresses;1000;{prices:100}
+Results:0
+dresses;1000;{stocks:40}
+Results:0
