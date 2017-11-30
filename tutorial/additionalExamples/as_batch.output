@@ -1,0 +1,105 @@
+RulesFile:as_batch.rules
+dresses;1000;{stocks:20}
+Results:2
+ACTION:"SEND" DEST:warn TOPIC:low stocks DATA:[low stocks]
+ACTION:"SEND" DEST:warn TOPIC:low stocks DATA:{"dresses":{"stocks":20}}
+dresses;1000;{stocks:32}
+Results:2
+ACTION:"SEND" DEST:normal TOPIC:dress stocks DATA:[update stocks] BATCHMODE:true
+ACTION:"SEND" DEST:normal TOPIC:dress stocks DATA:{"dresses":{"stocks":32}} BATCHMODE:true
+dresses;1000;{stocks:19}
+Results:2
+ACTION:"SEND" DEST:warn TOPIC:low stocks DATA:[low stocks]
+ACTION:"SEND" DEST:warn TOPIC:low stocks DATA:{"dresses":{"stocks":19}}
+dresses;1000;{stocks:46}
+Results:2
+ACTION:"SEND" DEST:normal TOPIC:dress stocks DATA:[update stocks] BATCHMODE:true
+ACTION:"SEND" DEST:normal TOPIC:dress stocks DATA:{"dresses":{"stocks":46}} BATCHMODE:true
+dresses;1000;{stocks:1}
+Results:2
+ACTION:"SEND" DEST:warn TOPIC:low stocks DATA:[low stocks]
+ACTION:"SEND" DEST:warn TOPIC:low stocks DATA:{"dresses":{"stocks":1}}
+dresses;1000;{stocks:70}
+Results:2
+ACTION:"SEND" DEST:normal TOPIC:dress stocks DATA:[update stocks] BATCHMODE:true
+ACTION:"SEND" DEST:normal TOPIC:dress stocks DATA:{"dresses":{"stocks":70}} BATCHMODE:true
+dresses;1000;{stocks:20}
+Results:2
+ACTION:"SEND" DEST:warn TOPIC:low stocks DATA:[low stocks]
+ACTION:"SEND" DEST:warn TOPIC:low stocks DATA:{"dresses":{"stocks":20}}
+dresses;1000;{stocks:40}
+Results:2
+ACTION:"SEND" DEST:normal TOPIC:dress stocks DATA:[update stocks] BATCHMODE:true
+ACTION:"SEND" DEST:normal TOPIC:dress stocks DATA:{"dresses":{"stocks":40}} BATCHMODE:true
+dresses;1000;{stocks:80}
+Results:2
+ACTION:"SEND" DEST:normal TOPIC:dress stocks DATA:[update stocks] BATCHMODE:true
+ACTION:"SEND" DEST:normal TOPIC:dress stocks DATA:{"dresses":{"stocks":80}} BATCHMODE:true
+dresses;1000;{stocks:50}
+Results:2
+ACTION:"SEND" DEST:normal TOPIC:dress stocks DATA:[update stocks] BATCHMODE:true
+ACTION:"SEND" DEST:normal TOPIC:dress stocks DATA:{"dresses":{"stocks":50}} BATCHMODE:true
+dresses;1000;{stocks:10}
+Results:2
+ACTION:"SEND" DEST:warn TOPIC:low stocks DATA:[low stocks]
+ACTION:"SEND" DEST:warn TOPIC:low stocks DATA:{"dresses":{"stocks":10}}
+dresses;1000;{stocks:22}
+Results:2
+ACTION:"SEND" DEST:normal TOPIC:dress stocks DATA:[update stocks] BATCHMODE:true
+ACTION:"SEND" DEST:normal TOPIC:dress stocks DATA:{"dresses":{"stocks":22}} BATCHMODE:true
+dresses;1000;{stocks:18}
+Results:2
+ACTION:"SEND" DEST:warn TOPIC:low stocks DATA:[low stocks]
+ACTION:"SEND" DEST:warn TOPIC:low stocks DATA:{"dresses":{"stocks":18}}
+dresses;1000;{stocks:6}
+Results:2
+ACTION:"SEND" DEST:warn TOPIC:low stocks DATA:[low stocks]
+ACTION:"SEND" DEST:warn TOPIC:low stocks DATA:{"dresses":{"stocks":6}}
+dresses;1000;{stocks:10}
+Results:2
+ACTION:"SEND" DEST:warn TOPIC:low stocks DATA:[low stocks]
+ACTION:"SEND" DEST:warn TOPIC:low stocks DATA:{"dresses":{"stocks":10}}
+dresses;1000;{stocks:22}
+Results:2
+ACTION:"SEND" DEST:normal TOPIC:dress stocks DATA:[update stocks] BATCHMODE:true
+ACTION:"SEND" DEST:normal TOPIC:dress stocks DATA:{"dresses":{"stocks":22}} BATCHMODE:true
+dresses;1000;{stocks:18}
+Results:2
+ACTION:"SEND" DEST:warn TOPIC:low stocks DATA:[low stocks]
+ACTION:"SEND" DEST:warn TOPIC:low stocks DATA:{"dresses":{"stocks":18}}
+dresses;1000;{stocks:6}
+Results:2
+ACTION:"SEND" DEST:warn TOPIC:low stocks DATA:[low stocks]
+ACTION:"SEND" DEST:warn TOPIC:low stocks DATA:{"dresses":{"stocks":6}}
+dresses;1000;{stocks:50}
+Results:2
+ACTION:"SEND" DEST:normal TOPIC:dress stocks DATA:[update stocks] BATCHMODE:true
+ACTION:"SEND" DEST:normal TOPIC:dress stocks DATA:{"dresses":{"stocks":50}} BATCHMODE:true
+dresses;1000;{stocks:52}
+Results:2
+ACTION:"SEND" DEST:normal TOPIC:dress stocks DATA:[update stocks] BATCHMODE:true
+ACTION:"SEND" DEST:normal TOPIC:dress stocks DATA:{"dresses":{"stocks":52}} BATCHMODE:true
+dresses;1000;{stocks:58}
+Results:2
+ACTION:"SEND" DEST:normal TOPIC:dress stocks DATA:[update stocks] BATCHMODE:true
+ACTION:"SEND" DEST:normal TOPIC:dress stocks DATA:{"dresses":{"stocks":58}} BATCHMODE:true
+dresses;1000;{stocks:56}
+Results:2
+ACTION:"SEND" DEST:normal TOPIC:dress stocks DATA:[update stocks] BATCHMODE:true
+ACTION:"SEND" DEST:normal TOPIC:dress stocks DATA:{"dresses":{"stocks":56}} BATCHMODE:true
+dresses;1000;{stocks:50}
+Results:2
+ACTION:"SEND" DEST:normal TOPIC:dress stocks DATA:[update stocks] BATCHMODE:true
+ACTION:"SEND" DEST:normal TOPIC:dress stocks DATA:{"dresses":{"stocks":50}} BATCHMODE:true
+dresses;1000;{stocks:22}
+Results:2
+ACTION:"SEND" DEST:normal TOPIC:dress stocks DATA:[update stocks] BATCHMODE:true
+ACTION:"SEND" DEST:normal TOPIC:dress stocks DATA:{"dresses":{"stocks":22}} BATCHMODE:true
+dresses;1000;{stocks:1}
+Results:2
+ACTION:"SEND" DEST:warn TOPIC:low stocks DATA:[low stocks]
+ACTION:"SEND" DEST:warn TOPIC:low stocks DATA:{"dresses":{"stocks":1}}
+dresses;1000;{stocks:6}
+Results:2
+ACTION:"SEND" DEST:warn TOPIC:low stocks DATA:[low stocks]
+ACTION:"SEND" DEST:warn TOPIC:low stocks DATA:{"dresses":{"stocks":6}}

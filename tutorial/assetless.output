@@ -1,0 +1,9 @@
+RulesFile:assetless.rules
+;1000;{"temp": 1000, "msg":1}
+Results:1
+ACTION:"SEND" DEST:Starlord TOPIC:help DATA:{"temp":1000}
+;1000;{"temp": 1010, "msg":2}
+Results:1
+ACTION:"SEND" DEST:Starlord TOPIC:help DATA:{"temp":1010}
+;1000;{"pressure": 800, "msg":3}
+Results:0

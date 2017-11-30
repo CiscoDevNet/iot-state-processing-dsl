@@ -1,0 +1,2 @@
+--LOG contain(engine.big, engine.small);
+SEND TO "normal" TOPIC "ENGINE DATA TRANSFORMATION" PAYLOAD contain(engine.big, engine.small);

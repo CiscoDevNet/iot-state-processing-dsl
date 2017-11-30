@@ -1,0 +1,2 @@
+-- convert the engine.date at UTC's timezone to be unix timestamp. The date is in the format of "yyyy-MM-dd'T'HH:mm:ss.SSS".
+SEND TO "normal" TOPIC "ENGINE DATE" PAYLOAD datetounix(engine.date, "UTC","yyyy-MM-dd'T'HH:mm:ss.SSS");

@@ -1,0 +1,16 @@
+-- java -jar iot-state-processing-dsl-0.5-SNAPSHOT-all.jar -r data/nestedWhenConditions.rules -d data/nestedWhenConditions.data -o data/nestedWhenConditions.output -l info
+
+-----------TASK8: Use nested when-----------
+when msg(elevator1.speed) > 10 then throttle<throttleNormal> (1 IN s){
+        SEND TO "normal" TOPIC "run fast" PAYLOAD "Elevator is being used";
+        SEND TO "normal" TOPIC "run fast" JSON elevator1.speed;
+} else {
+	when msg(elevator1.speed) == 0 for (5s) then throttle<throttleStop> (5 IN s) {
+	SEND TO "normal" TOPIC "stop" PAYLOAD "Elevator is not being used";
+	}
+	else throttle<throttleUrgent> (3 IN s){
+		SEND TO "normal" TOPIC "run slow" PAYLOAD "Elevator is being used";
+        	SEND TO "normal" TOPIC "run slow" JSON elevator1.speed;
+	}
+}
+

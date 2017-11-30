@@ -1,0 +1,14 @@
+-- java -jar iot-state-processing-dsl-0.5-SNAPSHOT-all.jar -r data/throttle.rules -d data/throttle.data -o data/throttle.output -l info
+
+-----------TASK7: Use throttle-----------
+when msg(dresses.stocks) > 30 then throttle<throttleNormal> (5 IN s){
+        SEND TO "normal" TOPIC "dress stocks" PAYLOAD "update stocks";
+        SEND TO "normal" TOPIC "dress stocks" JSON dresses.stocks;
+} else throttle<throttleUrgent> (1 IN s) {
+        SEND TO "warn" TOPIC "low stocks" PAYLOAD "low stocks";
+        SEND TO "warn" TOPIC "low stocks" JSON dresses.stocks;
+        SEND TO "purchase" TOPIC "purchase 30" PAYLOAD "Purchase 30 dresses";
+        SEND TO "purchase" TOPIC "purchase 30" JSON dresses.stocks;
+}
+
+	 

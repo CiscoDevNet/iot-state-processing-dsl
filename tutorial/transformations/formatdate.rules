@@ -1,0 +1,9 @@
+-- convert a certain date from "yyyy-MM-dd'T'HH:mm:ss.SSS'Z" format to another format
+SEND TO "normal" TOPIC "ENGINE DATE" PAYLOAD formatdate(engine.date, "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", "EEE, d MMM yyyy HH:mm:ss");
+SEND TO "normal" TOPIC "ENGINE DATE" PAYLOAD formatdate(engine.date, "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", "yyyy.MM.dd G 'at' HH:mm:ss z");
+SEND TO "normal" TOPIC "ENGINE DATE" PAYLOAD formatdate(engine.date, "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", "yyyy.MMMMM.dd GGG hh:mm aaa");
+SEND TO "normal" TOPIC "ENGINE DATE" PAYLOAD formatdate(engine.date, "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", "MM-dd-yyyy'T'HH:mm:ss.SSSZ");
+SEND TO "normal" TOPIC "ENGINE DATE" PAYLOAD formatdate(engine.date, "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", "dd MMM, yyyy HH:mm:ss.SSSZ");
+SEND TO "normal" TOPIC "ENGINE DATE" PAYLOAD formatdate(engine.date, "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", "EEE MMM dd HH:mm:ss zzz yyyy");
+SEND TO "normal" TOPIC "ENGINE DATE" PAYLOAD formatdate(engine.date, "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", "yyyy/MM/dd HH:mm:ss z");
+SEND TO "normal" TOPIC "ENGINE DATE" PAYLOAD formatdate(engine.date, "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", "dd-MM-yy:HH:mm:SS Z");

@@ -1,0 +1,85 @@
+-- java -jar iot-state-processing-dsl-0.5-SNAPSHOT-all.jar -r data/arithmetic.rules -d data/arithmetic.data -o data/arithmetic.output -l info
+
+
+-----------TASK1: Declare global variables and apply arithmetic operations-----------
+init i = -1;
+init j = 0;
+init x = 2;
+init y = 9223372036854775807;
+init str = "please update info every 1 min";
+LOG i; PRINT j;					-- commands on the same line work
+LOG x;
+PRINT y;
+LOG str;
+
+sum = x + y; 					-- 2 + 9223372036854775807
+sub = x - y; 					-- 2 - 9223372036854775807
+mul = x * y; 					-- 2 * 9223372036854775807
+div = x / j; 					-- 2 / 0
+pow = y ^ i; 					-- 9223372036854775807 ^ (-1)
+LOG sum + " " + sub + " " + mul + " " + div + " " + pow;
+
+-----------TASK2: Use exponential symbol-----------
+PRINT 5^9;
+
+-----------TASK3: Use comparison and logical operators-----------
+when i > j then {				-- compare two numbers
+	LOG "greater";
+} else when i == j then {
+		LOG "equal";
+	} else when i < j then {
+		LOG "smaller";
+	}
+
+a = 50;						-- simple logic to test nested if conditions
+a = 60;
+a = 80;
+a = 90;
+a = 100;
+when a >= 60 then {			
+	when 60 <= a && a < 80 then {
+		LOG "The grade is C";
+	} else {
+		when 80 <= a && a < 90 then {
+			LOG "The grade is B";
+		} else {
+			when a == 100 then {
+				LOG "The grade is A+";
+			} else {
+				LOG "The grade is A";
+			}
+		} 
+	}
+}	
+else {
+	LOG "The grade is D";
+}
+
+b = 100;					-- simple test of != in the numerical context		     
+b = 90;
+when a != b then {
+	LOG "NOT EQUAL";
+} else {
+	LOG "EQUAL";
+}	
+
+str1 = "abXI12";				-- simple test of != in the string context
+str2 = "abXI12";
+str2 = abXI12;
+when str1 != str2 then {
+	LOG "NOT EQUAL";
+} else {
+	LOG "EQUAL";
+}
+
+LOG str1;
+LOG str2;
+
+str3 = "apple"
+str4 = "banana"
+when str3 < str4 then {
+	LOG "????less";
+} else {
+	LOG "????greater or equal";
+}
+

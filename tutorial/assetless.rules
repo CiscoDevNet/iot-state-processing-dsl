@@ -1,0 +1,20 @@
+-- Usage file for various components in DSL
+--	1. when
+
+LOG "########################################Start of Rule Application for a Message########################################";
+init {
+	high_limit=1020;
+	low_limit=1000;
+	i=2;
+}
+
+--'When' usage
+--$$$$$$$$$$$$$$$$
+
+--Log when temperature is inside a range i.e. 1000<temp<1020
+--============================================================================================================================================================
+low_limit = 500;
+when<RuleRange> msg(temp) < high_limit && msg(temp) > low_limit then {
+	LOG "Within Range Alert" + ":Rule Id:" + rule_id() ;
+	SEND TO "Starlord" TOPIC "help" JSON temp;
+}

@@ -1,0 +1,9 @@
+--java -jar ~/Documents/iot-state-processing-dsl/build/libs/iot-state-processing-dsl-0.6-SNAPSHOT-all.jar -r data/as_batch.rules -d data/as_batch.data -o data/as_batch.output -l info
+
+when msg(dresses.stocks) > 20 then {
+        SEND TO "normal" AS_BATCH TOPIC "dress stocks" PAYLOAD "update stocks";
+        SEND TO "normal" as_batch TOPIC "dress stocks" JSON dresses.stocks;
+} else {
+        SEND TO "warn" TOPIC "low stocks" PAYLOAD "low stocks";
+        SEND TO "warn" TOPIC "low stocks" JSON dresses.stocks;
+}

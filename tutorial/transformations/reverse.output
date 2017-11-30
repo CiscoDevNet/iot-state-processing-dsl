@@ -1,0 +1,28 @@
+RulesFile:reverse.rules
+engine;1000;{temp: 20, "model": " "}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:ENGINE MODEL DATA:[ ]
+engine;1000;{temp: 20, "model": "0"}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:ENGINE MODEL DATA:[0]
+engine;1000;{temp: 20, "model": "01"}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:ENGINE MODEL DATA:[10]
+engine;1000;{temp: 20, "model": "012"}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:ENGINE MODEL DATA:[210]
+engine;1000;{temp: 20, "model": "0123"}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:ENGINE MODEL DATA:[3210]
+engine;1000;{temp: 20, "model": "01234"}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:ENGINE MODEL DATA:[43210]
+engine;1000;{temp: 10, "model": "a"}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:ENGINE MODEL DATA:[a]
+engine;1000;{temp: 10, "model": "abc"}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:ENGINE MODEL DATA:[cba]
+engine;1000;{temp: 30, "model": "happy"}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:ENGINE MODEL DATA:[yppah]

@@ -1,0 +1,121 @@
+RulesFile:nestedWhenConditions.rules
+elevator1;1000;{"speed": 0}
+Results:2
+ACTION:"SEND" DEST:normal TOPIC:run slow DATA:[Elevator is being used]
+ACTION:"SEND" DEST:normal TOPIC:run slow DATA:{"elevator1":{"speed":0}}
+elevator1;1000;{"speed": 1}
+Results:0
+elevator1;1000;{"speed": 2}
+Results:0
+elevator1;1000;{"speed": 4}
+Results:2
+ACTION:"SEND" DEST:normal TOPIC:run slow DATA:[Elevator is being used]
+ACTION:"SEND" DEST:normal TOPIC:run slow DATA:{"elevator1":{"speed":4}}
+elevator1;1000;{"speed": 8}
+Results:0
+elevator1;1000;{"speed": 6}
+Results:0
+elevator1;1000;{"speed": 14}
+Results:2
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:[Elevator is being used]
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"elevator1":{"speed":14}}
+elevator1;1000;{"speed": 12}
+Results:2
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:[Elevator is being used]
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"elevator1":{"speed":12}}
+elevator1;1000;{"speed": 8}
+Results:2
+ACTION:"SEND" DEST:normal TOPIC:run slow DATA:[Elevator is being used]
+ACTION:"SEND" DEST:normal TOPIC:run slow DATA:{"elevator1":{"speed":8}}
+elevator1;1000;{"speed": 4}
+Results:0
+elevator1;1000;{"speed": 1}
+Results:0
+elevator1;1000;{"speed": 2}
+Results:2
+ACTION:"SEND" DEST:normal TOPIC:run slow DATA:[Elevator is being used]
+ACTION:"SEND" DEST:normal TOPIC:run slow DATA:{"elevator1":{"speed":2}}
+elevator1;1000;{"speed": 0}
+Results:0
+elevator1;1000;{"speed": 0}
+Results:0
+elevator1;1000;{"speed": 0}
+Results:2
+ACTION:"SEND" DEST:normal TOPIC:run slow DATA:[Elevator is being used]
+ACTION:"SEND" DEST:normal TOPIC:run slow DATA:{"elevator1":{"speed":0}}
+elevator1;1000;{"speed": 0}
+Results:0
+elevator1;1000;{"speed": 0}
+Results:0
+elevator1;1000;{"speed": 1}
+Results:2
+ACTION:"SEND" DEST:normal TOPIC:run slow DATA:[Elevator is being used]
+ACTION:"SEND" DEST:normal TOPIC:run slow DATA:{"elevator1":{"speed":1}}
+elevator1;1000;{"speed": 2}
+Results:0
+elevator1;1000;{"speed": 4}
+Results:0
+elevator1;1000;{"speed": 8}
+Results:2
+ACTION:"SEND" DEST:normal TOPIC:run slow DATA:[Elevator is being used]
+ACTION:"SEND" DEST:normal TOPIC:run slow DATA:{"elevator1":{"speed":8}}
+elevator1;1000;{"speed": 4}
+Results:0
+elevator1;1000;{"speed": 1}
+Results:0
+elevator1;1000;{"speed": 0}
+Results:2
+ACTION:"SEND" DEST:normal TOPIC:run slow DATA:[Elevator is being used]
+ACTION:"SEND" DEST:normal TOPIC:run slow DATA:{"elevator1":{"speed":0}}
+elevator1;1000;{"speed": 0}
+Results:0
+elevator1;1000;{"speed": 0}
+Results:0
+elevator1;1000;{"speed": 0}
+Results:2
+ACTION:"SEND" DEST:normal TOPIC:run slow DATA:[Elevator is being used]
+ACTION:"SEND" DEST:normal TOPIC:run slow DATA:{"elevator1":{"speed":0}}
+elevator1;1000;{"speed": 0}
+Results:0
+elevator1;1000;{"speed": 0}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:stop DATA:[Elevator is not being used]
+elevator1;1000;{"speed": 0}
+Results:0
+elevator1;1000;{"speed": 0}
+Results:0
+elevator1;1000;{"speed": 0}
+Results:0
+elevator1;1000;{"speed": 0}
+Results:0
+elevator1;1000;{"speed": 0}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:stop DATA:[Elevator is not being used]
+elevator1;1000;{"speed": 1}
+Results:2
+ACTION:"SEND" DEST:normal TOPIC:run slow DATA:[Elevator is being used]
+ACTION:"SEND" DEST:normal TOPIC:run slow DATA:{"elevator1":{"speed":1}}
+elevator1;1000;{"speed": 2}
+Results:0
+elevator1;1000;{"speed": 4}
+Results:0
+elevator1;1000;{"speed": 8}
+Results:2
+ACTION:"SEND" DEST:normal TOPIC:run slow DATA:[Elevator is being used]
+ACTION:"SEND" DEST:normal TOPIC:run slow DATA:{"elevator1":{"speed":8}}
+elevator1;1000;{"speed": 16}
+Results:2
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:[Elevator is being used]
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"elevator1":{"speed":16}}
+elevator1;1000;{"speed": 14}
+Results:2
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:[Elevator is being used]
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"elevator1":{"speed":14}}
+elevator1;1000;{"speed": 12}
+Results:2
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:[Elevator is being used]
+ACTION:"SEND" DEST:normal TOPIC:run fast DATA:{"elevator1":{"speed":12}}
+elevator1;1000;{"speed": 8}
+Results:2
+ACTION:"SEND" DEST:normal TOPIC:run slow DATA:[Elevator is being used]
+ACTION:"SEND" DEST:normal TOPIC:run slow DATA:{"elevator1":{"speed":8}}

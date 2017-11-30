@@ -1,0 +1,4 @@
+RulesFile:trans2.rules
+engine;1000;{temp: 20, "data": "{\"sensor\": 3636,\"id\": 6177,\"data\": [{\"timestamp\": 1459959180,\"all\": {\"direction_1\": 5,\"direction_2\": 5},\"ped\": {\"direction_1\": 5,\"direction_2\": 4},\"bike\": {\"direction_1\": 0,\"direction_2\": 1}}]}"}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:ENGINE DATA TRANSFORMATION DATA:[{"sensor":3636,"id":6177,"data":[{"value":5,"metric":"placemeter.all","timestamp":1459959180,"tag":{"host":"6177","class":"direction_2"}},{"value":4,"metric":"placemeter.ped","timestamp":1459959180,"tag":{"host":"6177","class":"direction_2"}},{"value":1,"metric":"placemeter.bike","timestamp":1459959180,"tag":{"host":"6177","class":"direction_2"}}]}]

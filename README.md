@@ -46,7 +46,7 @@ The attached rule set tutorial and examples provide a hands-on method to start c
 For example, open a .rules file and review the comment lines that begin with "–" to understand the corresponding syntax. Run the rule against the *.data file specified in the .rule file to produce the resulting data in the *.output file.
 
 ## Learn how to write rules  
-To get started with the iot-state-processing-dsl language and writing your own rules, go to src/test/GettingStarted.md.  
+To get started with the iot-state-processing-dsl language and writing your own rules, go to [GettingStarted.md](GettingStarted.md).  
 
 ## Example rule sets included in this tutorial
 The following rule sets are included in the tutorial:
@@ -64,13 +64,76 @@ The following rule sets are included in the tutorial:
 |variableInitLogAccessMsg.rules|	Shows how to initialize variables, create logging statements, and access data inside observations|
 |whenUsage.rules|Shows the usage of conditionals|
 
-## How to test your rule sets
-We highly recommended testing your rule set before adding it to the product.
 
-Use the **iot-state-processing-dsl-*version*-all.jar** tool to process a data sample using your draft rule set.
+# To RUN the build-in command line rule eval app :
+```
+usage: java -jar iot-state-processing-dsl-<version>-all.jar
+ -a,--amqp-file <arg>   name of AMQP config file(absolute path)
+ -d,--data-file <arg>   name of data file(absolute path)
+ -h,--help              help on using the jar file
+ -l,--log-level <arg>   loglevels: trace, debug, info, warn, error
+ -o,--output <arg>      Optional output
+ -r,--rule-file <arg>   name of rules file(absolute path)
 
-1. Prepare the data using format similar to the *.data in the tutorial.
-1. Create your rule set.
-1. Run the following command:
-    **java –jar iot-state-processing-dsl-*version*-all.jar -h**
-1. Review the resulting data to verify that the rule set worked as expected.
+Reading observation data from a file 
+Usage:
+java -jar build/libs/iot-state-processing-dsl-<version>-SNAPSHOT-all.jar -r tutorial/whenUsage.rules -d tutorial/genericData.data  -l warn -o tutorial/testOutput02
+
+```
+
+In this mode a command line option of "-d" is mentioned along with the file name. The data in the file is processesed against the rule set one time. "-d" option takes precedence over "-a" option when both are mentioned in the command line.
+
+```
+Reading observation data from AMQP brokers (RabbitMQ)
+Usage:
+java -jar build/libs/iot-state-processing-dsl-<version>-SNAPSHOT-all.jar -r tutorial/whenUsage.rules  -a amqp_config.ini -l DEBUG -o tutorial/testOutput02
+
+```
+
+This mode needs a AMQP configuration file which has details realted to amqp broker information like host/ports, exchanges, vhost, username/password, SSL details. The configuration file can mentioned with "-a" option. In this mode the application connects with the AMQP broker over SSL or non-SSL based on setting in the configuration file.
+
+The application in this mode authenticates with the AMQP brokers, bind a queue to an exchange and starts consuming the messages. The consumed messages (one at a time) are processed against the rule set mentioned in the rules file (mentioned with -r option). When no data is available in the AMQP exchanges, the application waits (indefinately) for the messages to arrive. User can terminate the running application anytime (Eg: CTRL-C). The output is sent to a file when "-o" option is mentioned. Also it could be seen in the console (the amount of data logged to console depends upon the log level) 
+
+The AMQP configuration allows the users to connect to the broker over SSL or non-SSL (the parameter which controls this being "ssl_connection" in config file). When the client specifies the connection over SSL, user can use the default settings mentioned in the file related to SSL version and certificate. The CA certificate mentioned here could be used to validate the certificate from IOTDC AMQP brokers. Users can also mention their own CA certificate in the configuration file when connecting with the brokers not part of IOTDC. 
+
+```
+The AMQP broker configuration file is used by the application to establish communication and read data from the AMQP brokers. The format used is the "ini" file format. 
+The section "[rabbitmq]" is used to specify the details. The individual configuration element details are listed below:
+[All the fields are mandatory unless mentioned]
+
+host=
+The above parameter is the hostname of the AMQP broker.
+
+port=
+The above parameter is the port on which the client services are available.
+
+vhost=
+The above parameter is the "vhost" of the AMQP broker from which the data is to be read.
+
+exchange_name=
+The above parameter is the exchange on the above vhost in AMQP broker from which the data is is to be read. 
+
+exchange_type=
+The above parameter is the type of exchange mentioned above. 
+
+user_name=
+The above parameter is the username which has access to read the data from above exchange. 
+
+password=
+The above parameter is the password which will be used along with the above username to authenticate/authorize the user before reading the data. 
+
+ssl_connection=
+The above parameter is to use SSL or non-SSL based communication between application and AMQP broker. 
+
+ssl_version=TLSv1.2
+The above parameter is to TSL version that need to be used when SSL communication is mandated (Optional).
+
+ssl_cert_path=./certificates/wild-ca.crt
+The above parameter is to set the certificate path which will be used to validate the server certificate. (Optional. If not mentioned the default trust store will be used
+trustStore : /Library/Java/JavaVirtualMachines/jdk1.8.0_73.jdk/Contents/Home/jre/lib/security/cacerts
+trustStore type : jks
+
+A sample configuration file is provided here.
+ 
+```
+

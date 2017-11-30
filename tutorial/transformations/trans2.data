@@ -1,0 +1,1 @@
+engine;1000;{temp: 20, "data": "{\"sensor\": 3636,\"id\": 6177,\"data\": [{\"timestamp\": 1459959180,\"all\": {\"direction_1\": 5,\"direction_2\": 5},\"ped\": {\"direction_1\": 5,\"direction_2\": 4},\"bike\": {\"direction_1\": 0,\"direction_2\": 1}}]}"}

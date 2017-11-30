@@ -1,0 +1,79 @@
+RulesFile:for.rules
+dresses;1000;{stocks: 100}
+Results:0
+dresses;1000;{stocks: 20}
+Results:0
+dresses;1000;{stocks: 21}
+Results:0
+dresses;1000;{stocks: 40}
+Results:0
+dresses;1000;{stocks: 10}
+Results:0
+dresses;1000;{stocks: 22}
+Results:0
+dresses;1000;{stocks: 23}
+Results:3
+ACTION:"SEND" DEST:warn TOPIC:low stocks DATA:{"dresses":{"stocks":23}}
+ACTION:"SEND" DEST:warn TOPIC:low stocks DATA:{"dresses":{"stocks":23}}
+ACTION:"SEND" DEST:warn TOPIC:low stocks DATA:{"dresses":{"stocks":23}}
+dresses;1000;{stocks: 40}
+Results:0
+dresses;1000;{stocks: 60}
+Results:0
+dresses;1000;{stocks: 70}
+Results:0
+dresses;1000;{stocks: 52}
+Results:0
+dresses;1000;{stocks: 40}
+Results:0
+dresses;1000;{stocks: 20}
+Results:0
+dresses;1000;{stocks: 23}
+Results:0
+dresses;1000;{stocks: 24}
+Results:3
+ACTION:"SEND" DEST:warn TOPIC:low stocks DATA:{"dresses":{"stocks":24}}
+ACTION:"SEND" DEST:warn TOPIC:low stocks DATA:{"dresses":{"stocks":24}}
+ACTION:"SEND" DEST:warn TOPIC:low stocks DATA:{"dresses":{"stocks":24}}
+dresses;1000;{stocks: 4}
+Results:1
+ACTION:"SEND" DEST:warn TOPIC:low stocks DATA:{"dresses":{"stocks":4}}
+dresses;1000;{stocks: 10}
+Results:3
+ACTION:"SEND" DEST:warn TOPIC:low stocks DATA:{"dresses":{"stocks":10}}
+ACTION:"SEND" DEST:warn TOPIC:low stocks DATA:{"dresses":{"stocks":10}}
+ACTION:"SEND" DEST:warn TOPIC:low stocks DATA:{"dresses":{"stocks":10}}
+dresses;1000;{stocks: 20}
+Results:0
+dresses;1000;{stocks: 2}
+Results:1
+ACTION:"SEND" DEST:warn TOPIC:low stocks DATA:{"dresses":{"stocks":2}}
+dresses;1000;{stocks: 40}
+Results:0
+dresses;1000;{stocks: 90}
+Results:0
+dresses;1000;{stocks: 20}
+Results:0
+dresses;1000;{stocks: 2}
+Results:0
+dresses;1000;{stocks: 4}
+Results:3
+ACTION:"SEND" DEST:warn TOPIC:low stocks DATA:{"dresses":{"stocks":4}}
+ACTION:"SEND" DEST:warn TOPIC:low stocks DATA:{"dresses":{"stocks":4}}
+ACTION:"SEND" DEST:warn TOPIC:low stocks DATA:{"dresses":{"stocks":4}}
+dresses;1000;{stocks: 60}
+Results:0
+dresses;1000;{stocks: 54}
+Results:0
+dresses;1000;{stocks: 24}
+Results:0
+dresses;1000;{stocks: 40}
+Results:0
+dresses;1000;{stocks: 60}
+Results:0
+dresses;1000;{stocks: 30}
+Results:0
+dresses;1000;{stocks: 8}
+Results:0
+dresses;1000;{stocks: 7}
+Results:0

@@ -1,0 +1,16 @@
+RulesFile:replace.rules
+engine;1000;{temp: 20, "model": "ABC"}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:ENGINE MODEL DATA:[abc]
+engine;1000;{temp: 20, "model": "aABCc"}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:ENGINE MODEL DATA:[aabcc]
+engine;1000;{temp: 20, "model": "ABCabcABC"}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:ENGINE MODEL DATA:[abcabcabc]
+engine;1000;{temp: 20, "model": "abcABABABA"}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:ENGINE MODEL DATA:[abcABABABA]
+engine;1000;{temp: 20, "model": "0ABCABC1"}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:ENGINE MODEL DATA:[0abcabc1]

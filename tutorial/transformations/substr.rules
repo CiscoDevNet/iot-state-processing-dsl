@@ -1,0 +1,1 @@
+SEND TO "normal" TOPIC "ENGINE MODEL" PAYLOAD substr(engine.model, 0, 3);

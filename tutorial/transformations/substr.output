@@ -1,0 +1,31 @@
+RulesFile:substr.rules
+engine;1000;{temp: 20, "model": "0"}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:ENGINE MODEL DATA:[null]
+engine;1000;{temp: 20, "model": "01"}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:ENGINE MODEL DATA:[null]
+engine;1000;{temp: 20, "model": "012"}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:ENGINE MODEL DATA:[012]
+engine;1000;{temp: 20, "model": "0123"}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:ENGINE MODEL DATA:[012]
+engine;1000;{temp: 20, "model": "01234"}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:ENGINE MODEL DATA:[012]
+engine;1000;{temp: 10, "model": "what"}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:ENGINE MODEL DATA:[wha]
+engine;1000;{temp: 10, "model": "a"}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:ENGINE MODEL DATA:[null]
+engine;1000;{temp: 30, "model": "happy"}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:ENGINE MODEL DATA:[hap]
+engine;1000;{temp: 60, "model": "pleasant"}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:ENGINE MODEL DATA:[ple]
+engine;1000;{temp: 70, "model": "day"}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:ENGINE MODEL DATA:[day]

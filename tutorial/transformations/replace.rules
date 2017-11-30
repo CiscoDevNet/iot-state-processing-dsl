@@ -1,0 +1,4 @@
+--java -jar /Users/yixuyang/Desktop/iot-state-processing-dsl/build/libs/iot-state-processing-dsl-0.6-SNAPSHOT-all.jar -r test123/replace.rules -d test123/replace.data -o test123/replace.output -l info
+
+--LOG replace(engine.model, "ABC", "abc");
+SEND TO "normal" TOPIC "ENGINE MODEL" PAYLOAD replace(engine.model, "ABC", "abc");

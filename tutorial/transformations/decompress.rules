@@ -1,0 +1,4 @@
+--java -jar /Users/yixuyang/Desktop/iot-state-processing-dsl/build/libs/iot-state-processing-dsl-0.6-SNAPSHOT-all.jar -r test123/decompress.rules -d test123/decompress.data -o test123/decompress.output -l info
+
+--LOG decompress(engine.model);
+SEND TO "normal" TOPIC "ENGINE MODEL" PAYLOAD decompress(engine.model);

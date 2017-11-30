@@ -1,0 +1,9 @@
+-- java -jar iot-state-processing-dsl-0.5-SNAPSHOT-all.jar -r data/TSwindow.rules -d data/TSwindow.data -o data/TSwindow.output -l info
+
+-----------TASK9: Use TS window-----------
+when msg(car1.speed) > -1 then {
+	car1.kmPerHour = 1.60934*car1.speed;
+	TS_UPDATE TS WITH car1.kmPerHour WINDOW(3s);
+	car1.avg_kmPerHour = ts_avg(TS);
+        SEND TO "normal" TOPIC "run fast" JSON car1.kmPerHour,car1.avg_kmPerHour,car1.timestamp;
+}
