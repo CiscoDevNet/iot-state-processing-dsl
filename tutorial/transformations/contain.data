@@ -1,0 +1,24 @@
+--contain
+engine;1000;{"big": "a", "small": "a"}
+engine;1000;{"big": "ABc", "small": "Bc"}
+engine;1000;{"big": "ABc", "small": "AB"}
+engine;1000;{"big": "ABcdeF", "small": "Bcd"}
+engine;1000;{"big": "ABcdeF", "small": "deF"}
+engine;1000;{"big": "ABcdeF", "small": "eF"}
+engine;1000;{"big": "ABcdeF", "small": "F"}
+engine;1000;{"big": "ABcdeF", "small": "AB"}
+engine;1000;{"big": "ABcdeF", "small": "A"}
+engine;1000;{"big": "ABcdeF", "small": "de"}
+
+--not contain
+engine;1000;{"big": "a", "small": "b"}
+engine;1000;{"big": "ABc", "small": "aBc"}
+engine;1000;{"big": "ABc", "small": "ABd"}
+engine;1000;{"big": "ABcdeF", "small": "Bd"}
+engine;1000;{"big": "ABcdeF", "small": "eFj"}
+engine;1000;{"big": "ABcdeF", "small": "ge"}
+engine;1000;{"big": "ABcdeF", "small": "_0_"}
+engine;1000;{"big": "ABcdeF", "small": "ABcdeF0"}
+engine;1000;{"big": "ABcdeF", "small": "Bc!"}
+engine;1000;{"big": "ABcdeF", "small": "!AB"}
+engine;1000;{"big": "AB", "small": "ABCD"}

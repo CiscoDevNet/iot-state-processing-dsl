@@ -1,0 +1,9 @@
+RulesFile:arithmeticOperationsPlusLoginalOperators.rules
+dev1;1000;{"name":"engine"}
+Results:0
+dev1;1000;{"temp":20}
+Results:0
+dev1;1000;{"pressure":60}
+Results:0
+dev1;1000;{"pressure":100, "temp":40}
+Results:0

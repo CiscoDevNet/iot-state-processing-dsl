@@ -1,0 +1,10 @@
+-- convert unixtime at GMT timezone to a certain format
+SEND TO "normal" TOPIC "ENGINE DATE" PAYLOAD unixtodate(engine.timestamp, "GMT", "yyyy-MM-dd'T'HH:mm:ss.SSS Z");
+SEND TO "normal" TOPIC "ENGINE DATE" PAYLOAD unixtodate(engine.timestamp, "GMT", "EEE, d MMM yyyy HH:mm:ss Z");
+SEND TO "normal" TOPIC "ENGINE DATE" PAYLOAD unixtodate(engine.timestamp, "GMT", "yyyy.MM.dd G 'at' HH:mm:ss z");
+SEND TO "normal" TOPIC "ENGINE DATE" PAYLOAD unixtodate(engine.timestamp, "GMT", "yyyy.MMMMM.dd GGG hh:mm aaa");
+-- convert unixtime at GMT+7 timezone to a certain format
+SEND TO "normal" TOPIC "ENGINE DATE" PAYLOAD unixtodate(engine.timestamp, "GMT+7", "MM-dd-yyyy HH:mm:ss.SSSZ");
+SEND TO "normal" TOPIC "ENGINE DATE" PAYLOAD unixtodate(engine.timestamp, "GMT+7", "EEE MMM dd HH:mm:ss zzz yyyy");
+SEND TO "normal" TOPIC "ENGINE DATE" PAYLOAD unixtodate(engine.timestamp, "GMT+7", "yyyy/MM/dd HH:mm:ss z");
+SEND TO "normal" TOPIC "ENGINE DATE" PAYLOAD unixtodate(engine.timestamp, "GMT+7", "dd-MM-yy:HH:mm:SSZ");

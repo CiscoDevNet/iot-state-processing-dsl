@@ -1,0 +1,16 @@
+RulesFile:decompress.rules
+engine;1000;{temp: 20, "model": "a1b2c3"}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:ENGINE MODEL DATA:[abbccc]
+engine;1000;{temp: 20, "model": "a0b1c1"}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:ENGINE MODEL DATA:[bc]
+engine;1000;{temp: 20, "model": "a0b1c0d1"}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:ENGINE MODEL DATA:[bd]
+engine;1000;{temp: 20, "model": "a3b5c7d1"}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:ENGINE MODEL DATA:[aaabbbbbcccccccd]
+engine;1000;{temp: 20, "model": "a2b4c6d8"}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:ENGINE MODEL DATA:[aabbbbccccccdddddddd]

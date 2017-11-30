@@ -1,4 +1,0 @@
-dev1;1000;{"name":"engine"}
-dev1;1000;{"temp":20}
-dev1;1000;{"pressure":60}
-dev1;1000;{"pressure":100, "temp":40}

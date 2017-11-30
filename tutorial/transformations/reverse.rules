@@ -1,0 +1,4 @@
+--java -jar /Users/yixuyang/Desktop/iot-state-processing-dsl/build/libs/iot-state-processing-dsl-0.6-SNAPSHOT-all.jar -r testString/reverse.rules -d testString/reverse.data -o testString/reverse.output -l info
+
+--LOG reverse(engine.model);
+SEND TO "normal" TOPIC "ENGINE MODEL" PAYLOAD reverse(engine.model);

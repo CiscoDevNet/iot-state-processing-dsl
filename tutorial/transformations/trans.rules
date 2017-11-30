@@ -1,0 +1,4 @@
+-- the variable spec is string whose value is some JSON. All the double quotes in the JSON should be replaced by "&quot;"
+-- For instance, `"operation"` should be written as `&quot;operation&quot;` 
+init spec = "[{&quot;operation&quot;: &quot;shift&quot;,&quot;spec&quot;: {&quot;sensor&quot;: &quot;sensor&quot;,&quot;id&quot;: &quot;id&quot;,&quot;datapoints&quot;: {&quot;*&quot;: {&quot;0&quot;: &quot;data[&1].@(4,count).@(4,metric)&quot;,&quot;1&quot;: &quot;data[&1].timestamp&quot;}}}}]"
+SEND TO "normal" TOPIC "ENGINE DATA TRANSFORMATION" PAYLOAD trans(engine.data, spec);

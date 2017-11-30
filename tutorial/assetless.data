@@ -1,0 +1,4 @@
+--Asset Name;Delay;Message
+;1000;{"temp": 1000, "msg":1}
+;1000;{"temp": 1010, "msg":2}
+;1000;{"pressure": 800, "msg":3}

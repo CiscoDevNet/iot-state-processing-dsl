@@ -1,0 +1,4 @@
+RulesFile:trans1.rules
+engine;1000;{"data": "{\"prevTemp\": 60,\"currentTemp\": 80}"}
+Results:1
+ACTION:"SEND" DEST:normal TOPIC:ENGINE DATA TRANSFORMATION DATA:[{"prevTemp":80}]
