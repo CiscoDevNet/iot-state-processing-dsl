@@ -1,0 +1,4 @@
+RulesFile:stringPath.rules
+engine;1000;{"temp":1000}
+Results:1
+ACTION:"SEND" DEST:ibm TOPIC:test DATA:{"a":"Hi How are you?","b":"Hello","c":"Hello, World"}
